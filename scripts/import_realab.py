@@ -30,7 +30,7 @@ import soundfile as sf
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 REPOSITORY_FILES = REPO_ROOT / "RepositoryFiles"
-MEASUREMENTS = REPO_ROOT / "measurements" / "0_in-ear"
+MEASUREMENTS_ROOT = REPO_ROOT / "measurements"
 TARGETS = REPO_ROOT / "targets"
 DOCS = REPO_ROOT / "docs"
 TARGET_IMPORT = REPO_ROOT / "target_import_material"
@@ -99,6 +99,20 @@ def get_type_name(item: dict[str, Any]) -> str:
     return f"type_{typ}"
 
 
+def infer_preciseq_type_and_category(meta: dict[str, Any]) -> tuple[int, str]:
+    cat = meta.get("cat") or {}
+    cat_text = " ".join(str(x) for x in [cat.get("name") if isinstance(cat, dict) else cat, cat.get("link") if isinstance(cat, dict) else ""]).lower()
+    title = str(meta.get("title") or "").lower()
+    combined = f"{cat_text} {title}"
+    if any(key in combined for key in ["in-ear", "iem", "入耳", "耳塞"]):
+        return 0, "0_in-ear"
+    if any(key in combined for key in ["open-back", "开放"]):
+        return 1, "1_open-back"
+    if any(key in combined for key in ["over-ear", "头戴", "closed-back", "封闭", "wireless over-ear"]):
+        return 2, "2_closed-back"
+    return 0, "0_in-ear"
+
+
 def choose_fr_curve(items: list[dict[str, Any]], preferred_title_regex: str | None = None) -> tuple[int, dict[str, Any]]:
     fr = [(i, it) for i, it in enumerate(items) if "Frequency Response" in get_type_name(it) or "频率响应" in get_type_name(it)]
     if not fr:
@@ -141,13 +155,13 @@ def ensure_zero_target() -> Path:
     return p
 
 
-def run_autoeq(autoeq_python: str, measurement_csv: Path, target_csv: Path, work_name: str) -> Path:
+def run_autoeq(autoeq_python: str, measurement_csv: Path, target_csv: Path, work_name: str, category_dir: str) -> Path:
     py = Path(autoeq_python)
     if not py.exists():
         raise RuntimeError(f"AutoEq Python not found: {py}. Create it with python3.11 venv + pip install autoeq soundfile.")
     temp = Path(tempfile.mkdtemp(prefix="preciseq_realab_autoeq_"))
-    in_dir = temp / "input" / "0_in-ear"
-    combined_work_dir = temp / "combined" / "0_in-ear" / work_name
+    in_dir = temp / "input" / category_dir
+    combined_work_dir = temp / "combined" / category_dir / work_name
     in_dir.mkdir(parents=True)
     combined_work_dir.mkdir(parents=True)
     in_csv = in_dir / f"{work_name}.csv"
@@ -175,7 +189,7 @@ def run_autoeq(autoeq_python: str, measurement_csv: Path, target_csv: Path, work
         log_path = temp / f"autoeq_{fs}.log"
         with log_path.open("w", encoding="utf-8") as log:
             subprocess.run(cmd, stdout=log, stderr=subprocess.STDOUT, check=True)
-        matches = list((out_dir / "0_in-ear" / work_name).glob(f"* minimum phase {fs}Hz.wav"))
+        matches = list((out_dir / category_dir / work_name).glob(f"* minimum phase {fs}Hz.wav"))
         if not matches:
             raise RuntimeError(f"Missing AutoEq output WAV for {fs} Hz in {out_dir}")
         shutil.copy2(matches[0], combined_work_dir / matches[0].name)
@@ -282,7 +296,7 @@ def update_repo_info() -> None:
 def update_manifest() -> None:
     manifest = []
     for p in sorted(REPO_ROOT.rglob("*")):
-        if ".git" in p.parts:
+        if ".git" in p.parts or "__pycache__" in p.parts:
             continue
         if p.is_file():
             manifest.append({
@@ -302,7 +316,7 @@ def main() -> None:
     ap.add_argument("--id-override", default=None, help="Optional stable PrecisEQ id override for regenerating legacy entries without changing filenames.")
     args = ap.parse_args()
 
-    for d in [REPOSITORY_FILES, MEASUREMENTS, TARGETS, DOCS, TARGET_IMPORT, SOURCE_ARCHIVE]:
+    for d in [REPOSITORY_FILES, MEASUREMENTS_ROOT, TARGETS, DOCS, TARGET_IMPORT, SOURCE_ARCHIVE]:
         d.mkdir(parents=True, exist_ok=True)
 
     html = fetch_text(args.url)
@@ -317,6 +331,7 @@ def main() -> None:
     (page_dir / "initial_data.json").write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     (page_dir / "metadata.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
 
+    hp_type, category_dir = infer_preciseq_type_and_category(meta)
     idx, curve = choose_fr_curve(D.get("data") or [], args.preferred_title_regex)
     curve_title = curve.get("title") or f"curve_{idx}"
     rows = curve.get("data") or []
@@ -332,13 +347,13 @@ def main() -> None:
     version = 1
     work_name = f"{title} {mode_label} {rig_label} {vol_label}".strip()
 
-    measurement_csv = MEASUREMENTS / f"{safe_file_stem(work_name)}.csv"
+    measurement_csv = MEASUREMENTS_ROOT / category_dir / f"{safe_file_stem(work_name)}.csv"
     write_curve_csv(measurement_csv, rows)
     raw_curve_csv = page_dir / f"selected_curve_{idx:02d}_{safe_file_stem(curve_title)}.csv"
     write_raw_csv(raw_curve_csv, rows)
 
     target_path = ensure_zero_target()
-    autoeq_output = run_autoeq(args.autoeq_python, measurement_csv, target_path, safe_file_stem(work_name, 120))
+    autoeq_output = run_autoeq(args.autoeq_python, measurement_csv, target_path, safe_file_stem(work_name, 120), category_dir)
     wavs = copy_wavs(autoeq_output, hp_id, version)
 
     brand_names, model_base = parse_brand_model(title, meta.get("brand"))
@@ -348,7 +363,7 @@ def main() -> None:
         model_zh = model_en.replace("AirPods", "AirPods").replace("ANC on", "降噪开").replace("experimental flat", "实验平直")
     entry = {
         "id": hp_id,
-        "type": 0,
+        "type": hp_type,
         "brandName": brand_names,
         "modelName": [model_en, model_zh],
         "version": version,

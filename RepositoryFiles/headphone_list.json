@@ -26,5 +26,44 @@
     ],
     "version": 1,
     "noDspOffsetDb": 0.0
+  },
+  {
+    "id": "nothingheadphone1anconbk5128balanced",
+    "type": 2,
+    "brandName": [
+      "Nothing"
+    ],
+    "modelName": [
+      "Headphone（1） ANC on - ReaLab BK5128 Balanced experimental flat",
+      "Headphone（1） ANC on - ReaLab BK5128 Balanced experimental flat"
+    ],
+    "version": 1,
+    "noDspOffsetDb": 0.0
+  },
+  {
+    "id": "nothingheadphone1anconbk5128bassboost",
+    "type": 2,
+    "brandName": [
+      "Nothing"
+    ],
+    "modelName": [
+      "Headphone（1） ANC on - ReaLab BK5128 BassBoost experimental flat",
+      "Headphone（1） ANC on - ReaLab BK5128 BassBoost experimental flat"
+    ],
+    "version": 1,
+    "noDspOffsetDb": 0.0
+  },
+  {
+    "id": "nothingheadphone1anconbk5128trebleboost",
+    "type": 2,
+    "brandName": [
+      "Nothing"
+    ],
+    "modelName": [
+      "Headphone（1） ANC on - ReaLab BK5128 TrebleBoost experimental flat",
+      "Headphone（1） ANC on - ReaLab BK5128 TrebleBoost experimental flat"
+    ],
+    "version": 1,
+    "noDspOffsetDb": 0.0
   }
 ]

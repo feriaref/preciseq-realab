@@ -1,0 +1,25 @@
+{
+  "url": "https://www.realab.com/data/1752845270598.html",
+  "title": "Nothing Headphone（1）",
+  "selected_curve_index": 2,
+  "selected_curve_title": "高音增强_ANC on（B&K 5128）",
+  "selected_curve_rows": 957,
+  "id": "nothingheadphone1anconbk5128trebleboost",
+  "version": 1,
+  "measurement_csv": "measurements/2_closed-back/Nothing_Headphone（1）_ANC_on_BK5128_TrebleBoost.csv",
+  "raw_curve_csv": "source_pages/nothingheadphone1/selected_curve_02_高音增强_ANC_on（BK_5128）.csv",
+  "wavs": [
+    "RepositoryFiles/nothingheadphone1anconbk5128trebleboost_1_44.wav",
+    "RepositoryFiles/nothingheadphone1anconbk5128trebleboost_1_48.wav",
+    "RepositoryFiles/nothingheadphone1anconbk5128trebleboost_1_96.wav",
+    "RepositoryFiles/nothingheadphone1anconbk5128trebleboost_1_192.wav"
+  ],
+  "target_material": [
+    "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_source_export.csv",
+    "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_frequency_raw.csv",
+    "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_frequency_db.csv",
+    "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_freq_db_no_header.txt",
+    "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_README.json"
+  ],
+  "note": "FIR generated to zero/flat AutoEq target; ReaLab target_data exported separately."
+}
