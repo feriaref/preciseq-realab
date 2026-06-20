@@ -1,0 +1,25 @@
+{
+  "url": "https://www.realab.com/data/1758317057514.html",
+  "title": "Apple/苹果 AirPods Pro 3",
+  "selected_curve_index": 6,
+  "selected_curve_title": "Volume-6_ANC on（B&K 5128）",
+  "selected_curve_rows": 957,
+  "id": "appleairpodspro3anconbk5128vol6",
+  "version": 1,
+  "measurement_csv": "measurements/0_in-ear/Apple_苹果_AirPods_Pro_3_ANC_on_BK5128_Volume-6.csv",
+  "raw_curve_csv": "source_pages/appleairpodspro3/selected_curve_06_Volume-6_ANC_on（BK_5128）.csv",
+  "wavs": [
+    "RepositoryFiles/appleairpodspro3anconbk5128vol6_1_44.wav",
+    "RepositoryFiles/appleairpodspro3anconbk5128vol6_1_48.wav",
+    "RepositoryFiles/appleairpodspro3anconbk5128vol6_1_96.wav",
+    "RepositoryFiles/appleairpodspro3anconbk5128vol6_1_192.wav"
+  ],
+  "target_material": [
+    "target_import_material/appleairpodspro3_ReaLab_Target_Response_2024_source_export.csv",
+    "target_import_material/appleairpodspro3_ReaLab_Target_Response_2024_frequency_raw.csv",
+    "target_import_material/appleairpodspro3_ReaLab_Target_Response_2024_frequency_db.csv",
+    "target_import_material/appleairpodspro3_ReaLab_Target_Response_2024_freq_db_no_header.txt",
+    "target_import_material/appleairpodspro3_ReaLab_Target_Response_2024_README.json"
+  ],
+  "note": "FIR generated to zero/flat AutoEq target; ReaLab target_data exported separately."
+}

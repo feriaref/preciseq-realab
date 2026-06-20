@@ -25,6 +25,9 @@ import urllib.request
 from pathlib import Path
 from typing import Any
 
+import numpy as np
+import soundfile as sf
+
 REPO_ROOT = Path(__file__).resolve().parents[1]
 REPOSITORY_FILES = REPO_ROOT / "RepositoryFiles"
 MEASUREMENTS = REPO_ROOT / "measurements" / "0_in-ear"
@@ -34,6 +37,7 @@ TARGET_IMPORT = REPO_ROOT / "target_import_material"
 SOURCE_ARCHIVE = REPO_ROOT / "source_pages"
 AUTOEQ_PYTHON_DEFAULT = "/tmp/preciseq_py311_fixed/bin/python"
 ZERO_TARGET_URL = "https://raw.githubusercontent.com/yokodev-pro/PrecisEQ-Repository-oratory1990-Unofficial/main/targets/0_zero.csv"
+FIR_TAPS = 16384
 
 
 def fetch_text(url: str) -> str:
@@ -143,26 +147,52 @@ def run_autoeq(autoeq_python: str, measurement_csv: Path, target_csv: Path, work
         raise RuntimeError(f"AutoEq Python not found: {py}. Create it with python3.11 venv + pip install autoeq soundfile.")
     temp = Path(tempfile.mkdtemp(prefix="preciseq_realab_autoeq_"))
     in_dir = temp / "input" / "0_in-ear"
-    out_dir = temp / "output"
+    combined_work_dir = temp / "combined" / "0_in-ear" / work_name
     in_dir.mkdir(parents=True)
-    out_dir.mkdir(parents=True)
+    combined_work_dir.mkdir(parents=True)
     in_csv = in_dir / f"{work_name}.csv"
     shutil.copy2(measurement_csv, in_csv)
-    cmd = [
-        str(py), "-m", "autoeq",
-        "--input-dir", str(temp / "input"),
-        "--output-dir", str(out_dir),
-        "--target", str(target_csv),
-        "--fs", "44100,48000,96000,192000",
-        "--convolution-eq",
-        "--phase", "minimum",
-        "--bit-depth", "32",
-        "--preamp", "-11.8",
-    ]
-    log_path = temp / "autoeq.log"
-    with log_path.open("w", encoding="utf-8") as log:
-        subprocess.run(cmd, stdout=log, stderr=subprocess.STDOUT, check=True)
-    return out_dir / "0_in-ear" / work_name
+
+    # Official PrecisEQ repository WAVs use 32-bit float PCM and 16384-tap FIRs
+    # for every sample rate. AutoEq's --f-res controls FIR length as fs / f_res,
+    # so run each sample rate separately to keep the tap count fixed.
+    for fs in (44100, 48000, 96000, 192000):
+        out_dir = temp / f"output_{fs}"
+        out_dir.mkdir(parents=True)
+        f_res = fs / FIR_TAPS
+        cmd = [
+            str(py), "-m", "autoeq",
+            "--input-dir", str(temp / "input"),
+            "--output-dir", str(out_dir),
+            "--target", str(target_csv),
+            "--fs", str(fs),
+            "--convolution-eq",
+            "--phase", "minimum",
+            "--bit-depth", "32",
+            "--f-res", str(f_res),
+            "--preamp", "-11.8",
+        ]
+        log_path = temp / f"autoeq_{fs}.log"
+        with log_path.open("w", encoding="utf-8") as log:
+            subprocess.run(cmd, stdout=log, stderr=subprocess.STDOUT, check=True)
+        matches = list((out_dir / "0_in-ear" / work_name).glob(f"* minimum phase {fs}Hz.wav"))
+        if not matches:
+            raise RuntimeError(f"Missing AutoEq output WAV for {fs} Hz in {out_dir}")
+        shutil.copy2(matches[0], combined_work_dir / matches[0].name)
+    return combined_work_dir
+
+
+def write_official_style_wav(src: Path, dst: Path, expected_rate: int) -> None:
+    data, sr = sf.read(src, always_2d=True)
+    if sr != expected_rate:
+        raise RuntimeError(f"Unexpected sample rate for {src}: {sr}, expected {expected_rate}")
+    if data.shape[0] != FIR_TAPS:
+        raise RuntimeError(f"Unexpected FIR length for {src}: {data.shape[0]}, expected {FIR_TAPS}")
+    if data.shape[1] == 1:
+        data = np.repeat(data, 2, axis=1)
+    elif data.shape[1] != 2:
+        raise RuntimeError(f"Unexpected channel count for {src}: {data.shape[1]}")
+    sf.write(dst, data.astype("float32"), sr, subtype="FLOAT", format="WAV")
 
 
 def copy_wavs(output_dir: Path, hp_id: str, version: int) -> list[Path]:
@@ -173,7 +203,7 @@ def copy_wavs(output_dir: Path, hp_id: str, version: int) -> list[Path]:
         if not matches:
             raise RuntimeError(f"Missing AutoEq output WAV for {hz} Hz in {output_dir}")
         dst = REPOSITORY_FILES / f"{hp_id}_{version}_{short}.wav"
-        shutil.copy2(matches[0], dst)
+        write_official_style_wav(matches[0], dst, int(hz))
         copied.append(dst)
     return copied
 
@@ -269,6 +299,7 @@ def main() -> None:
     ap.add_argument("--preferred-title-regex", default=None)
     ap.add_argument("--autoeq-python", default=AUTOEQ_PYTHON_DEFAULT)
     ap.add_argument("--volume-label", default=None, help="Optional label appended in model name/id, defaults to selected curve title-derived label.")
+    ap.add_argument("--id-override", default=None, help="Optional stable PrecisEQ id override for regenerating legacy entries without changing filenames.")
     args = ap.parse_args()
 
     for d in [REPOSITORY_FILES, MEASUREMENTS, TARGETS, DOCS, TARGET_IMPORT, SOURCE_ARCHIVE]:
@@ -297,7 +328,7 @@ def main() -> None:
     vol_label = args.volume_label or (vol_match.group(0).replace(" ", "") if vol_match else f"curve{idx}")
     mode_label = "ANC on" if re.search(r"ANC\s*on", curve_title, re.I) else ""
     rig_label = "BK5128" if "5128" in curve_title else ""
-    hp_id = slug_ascii(f"{title} {mode_label} {rig_label} {vol_label}")
+    hp_id = args.id_override or slug_ascii(f"{title} {mode_label} {rig_label} {vol_label}")
     version = 1
     work_name = f"{title} {mode_label} {rig_label} {vol_label}".strip()
 

@@ -1,58 +1,58 @@
 [
   {
     "path": "MANIFEST.json",
-    "size": 6450,
-    "sha256": "45923f700b216a7fb1a8f692d54543c2739e7a194d546da7dff8290a0571b79c"
+    "size": 8586,
+    "sha256": "bcf9bc31c4addbdd9fa12c91daf84da0ef148c96f6a0d1490ba08bd424ca6947"
   },
   {
     "path": "README.md",
-    "size": 3015,
-    "sha256": "08ec9a87de7db046b0722734e5d39523b9eb0acf6fd7b43318dcf4ce1616b1cc"
+    "size": 3127,
+    "sha256": "e93bf49cdc41883763e61f01f181e14bf73b7d02296f37754b148f8f7d989202"
   },
   {
     "path": "RepositoryFiles/appleairpodspro2anconbk5128volume6_1_192.wav",
-    "size": 153644,
-    "sha256": "e3925ff567b0c7320531573c1bc08f0b842b22acfdd75f1f88292fc654b71228"
+    "size": 131160,
+    "sha256": "4c8e47c6771992e9ad49f7b1df2d162607a3b1eb39b89e92b60f794b67b26441"
   },
   {
     "path": "RepositoryFiles/appleairpodspro2anconbk5128volume6_1_44.wav",
-    "size": 36044,
-    "sha256": "bdfa97b14d0c864997e2e1f0b9aa555ddadc245dc86550dcda5b0b7286d0d206"
+    "size": 131160,
+    "sha256": "10457cf7f11f93d97c7d69ac4265e8dfb53ccfc5a05fb5fd805b9c93491d3ea7"
   },
   {
     "path": "RepositoryFiles/appleairpodspro2anconbk5128volume6_1_48.wav",
-    "size": 38444,
-    "sha256": "6a426f3f13e277c7836098eec1a91600547267a840d293313433b7a6374eaa87"
+    "size": 131160,
+    "sha256": "2f80c81ab91d2d7ab4a71fb3403e6d5124d4a69dcf42a213466bc96b3e545e54"
   },
   {
     "path": "RepositoryFiles/appleairpodspro2anconbk5128volume6_1_96.wav",
-    "size": 76844,
-    "sha256": "84724caf76ecdee0434d1ddd5c217bee9b52a113fc724e5053d6b645a7ca78aa"
+    "size": 131160,
+    "sha256": "60c4f00d97a158b23e4c463b06cce60fff7f4fa118e0c678c88a6b4dacc4d22e"
   },
   {
     "path": "RepositoryFiles/appleairpodspro3anconbk5128vol6_1_192.wav",
-    "size": 153644,
-    "sha256": "830465feeac920761aa8c80ef5db3b6e3c17cbfe0a12ee7d0110afc2e114fc62"
+    "size": 131160,
+    "sha256": "14e564a01495d9c9d9afdbc8f745b97314a88463af67f83df00af94339c052a1"
   },
   {
     "path": "RepositoryFiles/appleairpodspro3anconbk5128vol6_1_44.wav",
-    "size": 36044,
-    "sha256": "53487dd79fb8b573fcd1a7cf9f8db4ab17002be4cafa7c28f6234231b2a3e032"
+    "size": 131160,
+    "sha256": "0ae165c16c0bd8546eba31eeef09bb2e1d1d3c98898efae7c16edbc16b1c5be3"
   },
   {
     "path": "RepositoryFiles/appleairpodspro3anconbk5128vol6_1_48.wav",
-    "size": 38444,
-    "sha256": "791b8dadf90222d0506b9adca6770ebce8db9d4914be6c1fe6e33c619896ff97"
+    "size": 131160,
+    "sha256": "b09e1be5c0163d2a3ff910a261267ac5456b654fc1c71d7f180a4a2623b0291f"
   },
   {
     "path": "RepositoryFiles/appleairpodspro3anconbk5128vol6_1_96.wav",
-    "size": 76844,
-    "sha256": "9f7f23ad384e397091ca66de21a3780f385511b0de7eeb137fea30cd71ece039"
+    "size": 131160,
+    "sha256": "49b1c547ef08cbc07b0ffa42600a7eb6581d6dd732f47bf367fa2ee5f3a2f9a2"
   },
   {
     "path": "RepositoryFiles/headphone_list.json",
     "size": 679,
-    "sha256": "2b3b65f853bb21550c2caed818d0ce756449930cbe0e49ddf7ed75e7a6ed50e9"
+    "sha256": "480e4763cc2a574a84af9d0646330f2fa300c75c6df2260d70d03e53ee41c715"
   },
   {
     "path": "RepositoryFiles/repo_info.json",
@@ -85,9 +85,14 @@
     "sha256": "7f2ad76b37953e8f07176490da3a9ab04b27062fcbf924a86f834eab5e78ad05"
   },
   {
+    "path": "measurements/0_in-ear/Apple_苹果_AirPods_Pro_3_ANC_on_BK5128_Volume-6.csv",
+    "size": 18285,
+    "sha256": "cd1c6644870c152d66b612e8f9ad4618c9d77469f89ae0a0e65142a28368990a"
+  },
+  {
     "path": "scripts/import_realab.py",
-    "size": 14469,
-    "sha256": "ef1edc9242aef8cc01a01c975e33d8c6d41c0c7a4b9b9ae3c8b8703f1be86c0c"
+    "size": 16137,
+    "sha256": "bbe65bf9a513ac176f372733b01055dde56f8fbca2cbf0e42f0a60a01912d0f3"
   },
   {
     "path": "source_pages/appleairpodspro2/import_summary.json",
@@ -113,6 +118,31 @@
     "path": "source_pages/appleairpodspro2/source.html",
     "size": 538451,
     "sha256": "90d74c5df17c47d73c842fe4abf70915129a164e46582c9216e4a0cef5fb57e6"
+  },
+  {
+    "path": "source_pages/appleairpodspro3/import_summary.json",
+    "size": 1339,
+    "sha256": "c5b12a61a1b0b99fc6b1bf61a06859e1434e500d6c22f1a599166e89b0704772"
+  },
+  {
+    "path": "source_pages/appleairpodspro3/initial_data.json",
+    "size": 1638644,
+    "sha256": "bfd0f34034e41e31afb1c0dccc2b4ccf5bdf99958afebbf00eeafc9f08405376"
+  },
+  {
+    "path": "source_pages/appleairpodspro3/metadata.json",
+    "size": 528,
+    "sha256": "760aaddb5c88e01af683b2188ae0509c48ee06ee1fd03f487c30d92f62070343"
+  },
+  {
+    "path": "source_pages/appleairpodspro3/selected_curve_06_Volume-6_ANC_on（BK_5128）.csv",
+    "size": 18272,
+    "sha256": "742c1e463d4d07ef29cdb7bde218259cda91030d664ab44e3682a1b403d164f5"
+  },
+  {
+    "path": "source_pages/appleairpodspro3/source.html",
+    "size": 562576,
+    "sha256": "c67f94519f90e6069d1b4fe490c842b31e8e45b7ae87df1e9e17d63bd308197c"
   },
   {
     "path": "target_import_material/README.json",
@@ -171,6 +201,31 @@
   },
   {
     "path": "target_import_material/appleairpodspro2_ReaLab_Target_Response_2024_source_export.csv",
+    "size": 18257,
+    "sha256": "28643c48fb0d7ce3697862b281a756f854464c5a65d3bd51c96ed3ce3fb6b268"
+  },
+  {
+    "path": "target_import_material/appleairpodspro3_ReaLab_Target_Response_2024_README.json",
+    "size": 431,
+    "sha256": "24e5fdc666b89021bee3c3ec41010b51e38ee72bc68c5125b55fc849cc4294e4"
+  },
+  {
+    "path": "target_import_material/appleairpodspro3_ReaLab_Target_Response_2024_freq_db_no_header.txt",
+    "size": 20535,
+    "sha256": "8f8b9e9432ddf5db2ccaef3b4ec83139f87f0c3cfd9c7ab0939ad38f05879b07"
+  },
+  {
+    "path": "target_import_material/appleairpodspro3_ReaLab_Target_Response_2024_frequency_db.csv",
+    "size": 18269,
+    "sha256": "3e62a294c8f170a2f41810ac2a4e50a5777e32d829dd58b89ad7813e6c5d487f"
+  },
+  {
+    "path": "target_import_material/appleairpodspro3_ReaLab_Target_Response_2024_frequency_raw.csv",
+    "size": 18270,
+    "sha256": "6aa5e082a6c641d3b8a194424764eca777c66e24b4560a702dd0596236ccae11"
+  },
+  {
+    "path": "target_import_material/appleairpodspro3_ReaLab_Target_Response_2024_source_export.csv",
     "size": 18257,
     "sha256": "28643c48fb0d7ce3697862b281a756f854464c5a65d3bd51c96ed3ce3fb6b268"
   },
