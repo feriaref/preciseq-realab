@@ -1,0 +1,97 @@
+[
+  {
+    "path": "MANIFEST.json",
+    "size": 3291,
+    "sha256": "d8a41a85bb0ab1dbcef843420dba47c6dab0b436eced36bbcc4c991d2e30e56f"
+  },
+  {
+    "path": "README.md",
+    "size": 1374,
+    "sha256": "638d6b5ae0838f8ca38af987fa6d6048812708644167dfbdbaa04b7cebd9dd03"
+  },
+  {
+    "path": "RepositoryFiles/appleairpodspro3anconbk5128vol6_1_192.wav",
+    "size": 153644,
+    "sha256": "830465feeac920761aa8c80ef5db3b6e3c17cbfe0a12ee7d0110afc2e114fc62"
+  },
+  {
+    "path": "RepositoryFiles/appleairpodspro3anconbk5128vol6_1_44.wav",
+    "size": 36044,
+    "sha256": "53487dd79fb8b573fcd1a7cf9f8db4ab17002be4cafa7c28f6234231b2a3e032"
+  },
+  {
+    "path": "RepositoryFiles/appleairpodspro3anconbk5128vol6_1_48.wav",
+    "size": 38444,
+    "sha256": "791b8dadf90222d0506b9adca6770ebce8db9d4914be6c1fe6e33c619896ff97"
+  },
+  {
+    "path": "RepositoryFiles/appleairpodspro3anconbk5128vol6_1_96.wav",
+    "size": 76844,
+    "sha256": "9f7f23ad384e397091ca66de21a3780f385511b0de7eeb137fea30cd71ece039"
+  },
+  {
+    "path": "RepositoryFiles/headphone_list.json",
+    "size": 339,
+    "sha256": "43ee60a1e3f361b41fca2bac4e09ab686db9241e1ed93a01b3594f4ba88b5683"
+  },
+  {
+    "path": "RepositoryFiles/repo_info.json",
+    "size": 466,
+    "sha256": "f9b9e032e612030385ae857200eee31cd07220c272b15ca5cf474bf9e7a9252c"
+  },
+  {
+    "path": "docs/REPORT.md",
+    "size": 7272,
+    "sha256": "8f07ca369a407162873c77d4eadaa5b8dafce0ae35295c05ab98603a21124865"
+  },
+  {
+    "path": "docs/metadata.json",
+    "size": 579,
+    "sha256": "a9fe7a188188117cfed88330609314f6d74f601d2af33ad8f4743362279eefe5"
+  },
+  {
+    "path": "docs/summary.json",
+    "size": 16651,
+    "sha256": "23edf71415e3dd3641618a9937214ee8b1ea7cd8219b35faf716767afdccf066"
+  },
+  {
+    "path": "measurements/0_in-ear/Apple AirPods Pro 3 Volume-6 ANC on BK5128.csv",
+    "size": 18285,
+    "sha256": "cd1c6644870c152d66b612e8f9ad4618c9d77469f89ae0a0e65142a28368990a"
+  },
+  {
+    "path": "target_import_material/README.json",
+    "size": 501,
+    "sha256": "d52e7f560866c8dbe088d8559e22afcb903736883121448d3c7ae75c6501145d"
+  },
+  {
+    "path": "target_import_material/ReaLab_Target_Response_2024_freq_db_no_header.txt",
+    "size": 20535,
+    "sha256": "8f8b9e9432ddf5db2ccaef3b4ec83139f87f0c3cfd9c7ab0939ad38f05879b07"
+  },
+  {
+    "path": "target_import_material/ReaLab_Target_Response_2024_frequency_db.csv",
+    "size": 18269,
+    "sha256": "3e62a294c8f170a2f41810ac2a4e50a5777e32d829dd58b89ad7813e6c5d487f"
+  },
+  {
+    "path": "target_import_material/ReaLab_Target_Response_2024_frequency_raw.csv",
+    "size": 18270,
+    "sha256": "6aa5e082a6c641d3b8a194424764eca777c66e24b4560a702dd0596236ccae11"
+  },
+  {
+    "path": "target_import_material/ReaLab_Target_Response_2024_preciseq_target_qr_payload_experimental.json",
+    "size": 40380,
+    "sha256": "61455be52f52765993ba2b685c6badb3138b1b5f5a5c92172fbdcd3721d2c764"
+  },
+  {
+    "path": "target_import_material/ReaLab_Target_Response_2024_preciseq_target_qr_text_experimental.txt",
+    "size": 40396,
+    "sha256": "18e7ba4b9a63f2ade9e153a0a0aa3fa7d89bc3e823c448c74f812dfdc68d3031"
+  },
+  {
+    "path": "target_import_material/ReaLab_Target_Response_2024_source_export.csv",
+    "size": 17296,
+    "sha256": "5888d1518fc6822c79f2ce19e02ec9c9581338eaf8b7b60bc6fca931014c3048"
+  }
+]

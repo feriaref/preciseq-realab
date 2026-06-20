@@ -1,0 +1,716 @@
+[
+  {
+    "group": "measurements",
+    "index": 0,
+    "title": "Volume Max_ANC on（B&K 5128）",
+    "type_id": 1,
+    "type_name": "Frequency Response【频率响应】",
+    "type_raw": {
+      "description": "",
+      "id": 1,
+      "meta_data": "{}",
+      "name": "Frequency Response【频率响应】"
+    },
+    "rows": 957,
+    "header": [
+      "* Freq(Hz)",
+      " SPL(dB)"
+    ],
+    "first": [
+      "20",
+      "120.697"
+    ],
+    "last": [
+      "19896.97461",
+      "86.681"
+    ],
+    "csv": "/home/feria/realab_airpods_pro_3_extract/measurements/00_Frequency_Response【频率响应】_Volume_Max_ANC_on（BK_5128）.csv",
+    "alignment_db": null,
+    "alignment_hz": null,
+    "x_min_max": null,
+    "y_min_max": null
+  },
+  {
+    "group": "measurements",
+    "index": 1,
+    "title": "Volume-1_ANC on（B&K 5128）",
+    "type_id": 1,
+    "type_name": "Frequency Response【频率响应】",
+    "type_raw": {
+      "description": "",
+      "id": 1,
+      "meta_data": "{}",
+      "name": "Frequency Response【频率响应】"
+    },
+    "rows": 957,
+    "header": [
+      "* Freq(Hz)",
+      " SPL(dB)"
+    ],
+    "first": [
+      "20",
+      "118.495"
+    ],
+    "last": [
+      "19896.97461",
+      "85.196"
+    ],
+    "csv": "/home/feria/realab_airpods_pro_3_extract/measurements/01_Frequency_Response【频率响应】_Volume-1_ANC_on（BK_5128）.csv",
+    "alignment_db": null,
+    "alignment_hz": null,
+    "x_min_max": null,
+    "y_min_max": null
+  },
+  {
+    "group": "measurements",
+    "index": 2,
+    "title": "Volume-2_ANC on（B&K 5128）",
+    "type_id": 1,
+    "type_name": "Frequency Response【频率响应】",
+    "type_raw": {
+      "description": "",
+      "id": 1,
+      "meta_data": "{}",
+      "name": "Frequency Response【频率响应】"
+    },
+    "rows": 957,
+    "header": [
+      "* Freq(Hz)",
+      " SPL(dB)"
+    ],
+    "first": [
+      "20",
+      "113.522"
+    ],
+    "last": [
+      "19896.97461",
+      "81.926"
+    ],
+    "csv": "/home/feria/realab_airpods_pro_3_extract/measurements/02_Frequency_Response【频率响应】_Volume-2_ANC_on（BK_5128）.csv",
+    "alignment_db": null,
+    "alignment_hz": null,
+    "x_min_max": null,
+    "y_min_max": null
+  },
+  {
+    "group": "measurements",
+    "index": 3,
+    "title": "Volume-3_ANC on（B&K 5128）",
+    "type_id": 1,
+    "type_name": "Frequency Response【频率响应】",
+    "type_raw": {
+      "description": "",
+      "id": 1,
+      "meta_data": "{}",
+      "name": "Frequency Response【频率响应】"
+    },
+    "rows": 957,
+    "header": [
+      "* Freq(Hz)",
+      " SPL(dB)"
+    ],
+    "first": [
+      "20",
+      "109.421"
+    ],
+    "last": [
+      "19896.97461",
+      "78.749"
+    ],
+    "csv": "/home/feria/realab_airpods_pro_3_extract/measurements/03_Frequency_Response【频率响应】_Volume-3_ANC_on（BK_5128）.csv",
+    "alignment_db": null,
+    "alignment_hz": null,
+    "x_min_max": null,
+    "y_min_max": null
+  },
+  {
+    "group": "measurements",
+    "index": 4,
+    "title": "Volume-4_ANC on（B&K 5128）",
+    "type_id": 1,
+    "type_name": "Frequency Response【频率响应】",
+    "type_raw": {
+      "description": "",
+      "id": 1,
+      "meta_data": "{}",
+      "name": "Frequency Response【频率响应】"
+    },
+    "rows": 957,
+    "header": [
+      "* Freq(Hz)",
+      " SPL(dB)"
+    ],
+    "first": [
+      "20",
+      "105.96"
+    ],
+    "last": [
+      "19896.97461",
+      "75.204"
+    ],
+    "csv": "/home/feria/realab_airpods_pro_3_extract/measurements/04_Frequency_Response【频率响应】_Volume-4_ANC_on（BK_5128）.csv",
+    "alignment_db": null,
+    "alignment_hz": null,
+    "x_min_max": null,
+    "y_min_max": null
+  },
+  {
+    "group": "measurements",
+    "index": 5,
+    "title": "Volume-5_ANC on（B&K 5128）",
+    "type_id": 1,
+    "type_name": "Frequency Response【频率响应】",
+    "type_raw": {
+      "description": "",
+      "id": 1,
+      "meta_data": "{}",
+      "name": "Frequency Response【频率响应】"
+    },
+    "rows": 957,
+    "header": [
+      "* Freq(Hz)",
+      " SPL(dB)"
+    ],
+    "first": [
+      "20",
+      "103.525"
+    ],
+    "last": [
+      "19896.97461",
+      "72.555"
+    ],
+    "csv": "/home/feria/realab_airpods_pro_3_extract/measurements/05_Frequency_Response【频率响应】_Volume-5_ANC_on（BK_5128）.csv",
+    "alignment_db": null,
+    "alignment_hz": null,
+    "x_min_max": null,
+    "y_min_max": null
+  },
+  {
+    "group": "measurements",
+    "index": 6,
+    "title": "Volume-6_ANC on（B&K 5128）",
+    "type_id": 1,
+    "type_name": "Frequency Response【频率响应】",
+    "type_raw": {
+      "description": "",
+      "id": 1,
+      "meta_data": "{}",
+      "name": "Frequency Response【频率响应】"
+    },
+    "rows": 957,
+    "header": [
+      "* Freq(Hz)",
+      " SPL(dB)"
+    ],
+    "first": [
+      "20",
+      "100.61"
+    ],
+    "last": [
+      "19896.97461",
+      "69.464"
+    ],
+    "csv": "/home/feria/realab_airpods_pro_3_extract/measurements/06_Frequency_Response【频率响应】_Volume-6_ANC_on（BK_5128）.csv",
+    "alignment_db": null,
+    "alignment_hz": null,
+    "x_min_max": null,
+    "y_min_max": null
+  },
+  {
+    "group": "measurements",
+    "index": 7,
+    "title": "Volume-7_ANC on（B&K 5128）",
+    "type_id": 1,
+    "type_name": "Frequency Response【频率响应】",
+    "type_raw": {
+      "description": "",
+      "id": 1,
+      "meta_data": "{}",
+      "name": "Frequency Response【频率响应】"
+    },
+    "rows": 957,
+    "header": [
+      "* Freq(Hz)",
+      " SPL(dB)"
+    ],
+    "first": [
+      "20",
+      "97.77"
+    ],
+    "last": [
+      "19896.97461",
+      "66.27"
+    ],
+    "csv": "/home/feria/realab_airpods_pro_3_extract/measurements/07_Frequency_Response【频率响应】_Volume-7_ANC_on（BK_5128）.csv",
+    "alignment_db": null,
+    "alignment_hz": null,
+    "x_min_max": null,
+    "y_min_max": null
+  },
+  {
+    "group": "measurements",
+    "index": 8,
+    "title": "Volume-8_ANC on（B&K 5128）",
+    "type_id": 1,
+    "type_name": "Frequency Response【频率响应】",
+    "type_raw": {
+      "description": "",
+      "id": 1,
+      "meta_data": "{}",
+      "name": "Frequency Response【频率响应】"
+    },
+    "rows": 957,
+    "header": [
+      "* Freq(Hz)",
+      " SPL(dB)"
+    ],
+    "first": [
+      "20",
+      "94.954"
+    ],
+    "last": [
+      "19896.97461",
+      "63.176"
+    ],
+    "csv": "/home/feria/realab_airpods_pro_3_extract/measurements/08_Frequency_Response【频率响应】_Volume-8_ANC_on（BK_5128）.csv",
+    "alignment_db": null,
+    "alignment_hz": null,
+    "x_min_max": null,
+    "y_min_max": null
+  },
+  {
+    "group": "measurements",
+    "index": 9,
+    "title": "Volume-9_ANC on（B&K 5128）",
+    "type_id": 1,
+    "type_name": "Frequency Response【频率响应】",
+    "type_raw": {
+      "description": "",
+      "id": 1,
+      "meta_data": "{}",
+      "name": "Frequency Response【频率响应】"
+    },
+    "rows": 957,
+    "header": [
+      "* Freq(Hz)",
+      " SPL(dB)"
+    ],
+    "first": [
+      "20",
+      "92.148"
+    ],
+    "last": [
+      "19896.97461",
+      "60.004"
+    ],
+    "csv": "/home/feria/realab_airpods_pro_3_extract/measurements/09_Frequency_Response【频率响应】_Volume-9_ANC_on（BK_5128）.csv",
+    "alignment_db": null,
+    "alignment_hz": null,
+    "x_min_max": null,
+    "y_min_max": null
+  },
+  {
+    "group": "measurements",
+    "index": 10,
+    "title": "Volume-10_ANC on（B&K 5128）",
+    "type_id": 1,
+    "type_name": "Frequency Response【频率响应】",
+    "type_raw": {
+      "description": "",
+      "id": 1,
+      "meta_data": "{}",
+      "name": "Frequency Response【频率响应】"
+    },
+    "rows": 957,
+    "header": [
+      "* Freq(Hz)",
+      " SPL(dB)"
+    ],
+    "first": [
+      "20",
+      "88.882"
+    ],
+    "last": [
+      "19896.97461",
+      "56.344"
+    ],
+    "csv": "/home/feria/realab_airpods_pro_3_extract/measurements/10_Frequency_Response【频率响应】_Volume-10_ANC_on（BK_5128）.csv",
+    "alignment_db": null,
+    "alignment_hz": null,
+    "x_min_max": null,
+    "y_min_max": null
+  },
+  {
+    "group": "measurements",
+    "index": 11,
+    "title": "Volume-11_ANC on（B&K 5128）",
+    "type_id": 1,
+    "type_name": "Frequency Response【频率响应】",
+    "type_raw": {
+      "description": "",
+      "id": 1,
+      "meta_data": "{}",
+      "name": "Frequency Response【频率响应】"
+    },
+    "rows": 957,
+    "header": [
+      "* Freq(Hz)",
+      " SPL(dB)"
+    ],
+    "first": [
+      "20",
+      "85.632"
+    ],
+    "last": [
+      "19896.97461",
+      "52.751"
+    ],
+    "csv": "/home/feria/realab_airpods_pro_3_extract/measurements/11_Frequency_Response【频率响应】_Volume-11_ANC_on（BK_5128）.csv",
+    "alignment_db": null,
+    "alignment_hz": null,
+    "x_min_max": null,
+    "y_min_max": null
+  },
+  {
+    "group": "measurements",
+    "index": 12,
+    "title": "Volume-12_ANC on（B&K 5128）",
+    "type_id": 1,
+    "type_name": "Frequency Response【频率响应】",
+    "type_raw": {
+      "description": "",
+      "id": 1,
+      "meta_data": "{}",
+      "name": "Frequency Response【频率响应】"
+    },
+    "rows": 957,
+    "header": [
+      "* Freq(Hz)",
+      " SPL(dB)"
+    ],
+    "first": [
+      "20",
+      "80.594"
+    ],
+    "last": [
+      "19896.97461",
+      "47.846"
+    ],
+    "csv": "/home/feria/realab_airpods_pro_3_extract/measurements/12_Frequency_Response【频率响应】_Volume-12_ANC_on（BK_5128）.csv",
+    "alignment_db": null,
+    "alignment_hz": null,
+    "x_min_max": null,
+    "y_min_max": null
+  },
+  {
+    "group": "measurements",
+    "index": 13,
+    "title": "Volume-13_ANC on（B&K 5128）",
+    "type_id": 1,
+    "type_name": "Frequency Response【频率响应】",
+    "type_raw": {
+      "description": "",
+      "id": 1,
+      "meta_data": "{}",
+      "name": "Frequency Response【频率响应】"
+    },
+    "rows": 957,
+    "header": [
+      "* Freq(Hz)",
+      " SPL(dB)"
+    ],
+    "first": [
+      "20",
+      "75.129"
+    ],
+    "last": [
+      "19896.97461",
+      "42.403"
+    ],
+    "csv": "/home/feria/realab_airpods_pro_3_extract/measurements/13_Frequency_Response【频率响应】_Volume-13_ANC_on（BK_5128）.csv",
+    "alignment_db": null,
+    "alignment_hz": null,
+    "x_min_max": null,
+    "y_min_max": null
+  },
+  {
+    "group": "measurements",
+    "index": 14,
+    "title": "Volume-14_ANC on（B&K 5128）",
+    "type_id": 1,
+    "type_name": "Frequency Response【频率响应】",
+    "type_raw": {
+      "description": "",
+      "id": 1,
+      "meta_data": "{}",
+      "name": "Frequency Response【频率响应】"
+    },
+    "rows": 957,
+    "header": [
+      "* Freq(Hz)",
+      " SPL(dB)"
+    ],
+    "first": [
+      "20",
+      "69.259"
+    ],
+    "last": [
+      "19896.97461",
+      "37.812"
+    ],
+    "csv": "/home/feria/realab_airpods_pro_3_extract/measurements/14_Frequency_Response【频率响应】_Volume-14_ANC_on（BK_5128）.csv",
+    "alignment_db": null,
+    "alignment_hz": null,
+    "x_min_max": null,
+    "y_min_max": null
+  },
+  {
+    "group": "measurements",
+    "index": 15,
+    "title": "Volume-15_ANC on（B&K 5128）",
+    "type_id": 1,
+    "type_name": "Frequency Response【频率响应】",
+    "type_raw": {
+      "description": "",
+      "id": 1,
+      "meta_data": "{}",
+      "name": "Frequency Response【频率响应】"
+    },
+    "rows": 957,
+    "header": [
+      "* Freq(Hz)",
+      " SPL(dB)"
+    ],
+    "first": [
+      "20",
+      "62.295"
+    ],
+    "last": [
+      "19896.97461",
+      "33.078"
+    ],
+    "csv": "/home/feria/realab_airpods_pro_3_extract/measurements/15_Frequency_Response【频率响应】_Volume-15_ANC_on（BK_5128）.csv",
+    "alignment_db": null,
+    "alignment_hz": null,
+    "x_min_max": null,
+    "y_min_max": null
+  },
+  {
+    "group": "measurements",
+    "index": 16,
+    "title": "Volume-6_ANC on",
+    "type_id": 3,
+    "type_name": "THD【总谐波失真】",
+    "type_raw": {
+      "description": "",
+      "id": 3,
+      "meta_data": "{}",
+      "name": "THD【总谐波失真】"
+    },
+    "rows": 957,
+    "header": [
+      "* Freq (Hz)",
+      " THD (%)",
+      " H2 (%)",
+      " H3 (%)"
+    ],
+    "first": [
+      "20",
+      "0.06",
+      "0.0063",
+      "0.032"
+    ],
+    "last": [
+      "19896.975",
+      " 0.0E0",
+      "",
+      ""
+    ],
+    "csv": "/home/feria/realab_airpods_pro_3_extract/measurements/16_THD【总谐波失真】_Volume-6_ANC_on.csv",
+    "alignment_db": null,
+    "alignment_hz": null,
+    "x_min_max": null,
+    "y_min_max": null
+  },
+  {
+    "group": "measurements",
+    "index": 17,
+    "title": "ANC on 综合降噪",
+    "type_id": 4,
+    "type_name": "Noise Cancelling【降噪】",
+    "type_raw": {
+      "description": "",
+      "id": 4,
+      "meta_data": "{}",
+      "name": "Noise Cancelling【降噪】"
+    },
+    "rows": 957,
+    "header": [
+      "* Freq(Hz)",
+      " SPL(dB)"
+    ],
+    "first": [
+      "20",
+      "-14.906"
+    ],
+    "last": [
+      "19896.97461",
+      "-35.841"
+    ],
+    "csv": "/home/feria/realab_airpods_pro_3_extract/measurements/17_Noise_Cancelling【降噪】_ANC_on_综合降噪.csv",
+    "alignment_db": null,
+    "alignment_hz": null,
+    "x_min_max": null,
+    "y_min_max": null
+  },
+  {
+    "group": "measurements",
+    "index": 18,
+    "title": "ANC off 被动降噪",
+    "type_id": 4,
+    "type_name": "Noise Cancelling【降噪】",
+    "type_raw": {
+      "description": "",
+      "id": 4,
+      "meta_data": "{}",
+      "name": "Noise Cancelling【降噪】"
+    },
+    "rows": 957,
+    "header": [
+      "* Freq(Hz)",
+      " SPL(dB)"
+    ],
+    "first": [
+      "20",
+      "-0.436"
+    ],
+    "last": [
+      "19896.97461",
+      "-30.836"
+    ],
+    "csv": "/home/feria/realab_airpods_pro_3_extract/measurements/18_Noise_Cancelling【降噪】_ANC_off_被动降噪.csv",
+    "alignment_db": null,
+    "alignment_hz": null,
+    "x_min_max": null,
+    "y_min_max": null
+  },
+  {
+    "group": "measurements",
+    "index": 19,
+    "title": "ANC 主动降噪",
+    "type_id": 4,
+    "type_name": "Noise Cancelling【降噪】",
+    "type_raw": {
+      "description": "",
+      "id": 4,
+      "meta_data": "{}",
+      "name": "Noise Cancelling【降噪】"
+    },
+    "rows": 957,
+    "header": [
+      "* Freq(Hz)",
+      " SPL(dB)"
+    ],
+    "first": [
+      "20",
+      "-14.47"
+    ],
+    "last": [
+      "19896.97461",
+      "-5.009"
+    ],
+    "csv": "/home/feria/realab_airpods_pro_3_extract/measurements/19_Noise_Cancelling【降噪】_ANC_主动降噪.csv",
+    "alignment_db": null,
+    "alignment_hz": null,
+    "x_min_max": null,
+    "y_min_max": null
+  },
+  {
+    "group": "measurements",
+    "index": 20,
+    "title": "Transparency 透传_中等噪声",
+    "type_id": 4,
+    "type_name": "Noise Cancelling【降噪】",
+    "type_raw": {
+      "description": "",
+      "id": 4,
+      "meta_data": "{}",
+      "name": "Noise Cancelling【降噪】"
+    },
+    "rows": 957,
+    "header": [
+      "* Freq(Hz)",
+      " SPL(dB)"
+    ],
+    "first": [
+      "20",
+      "-0.06"
+    ],
+    "last": [
+      "19896.97461",
+      "-17.358"
+    ],
+    "csv": "/home/feria/realab_airpods_pro_3_extract/measurements/20_Noise_Cancelling【降噪】_Transparency_透传_中等噪声.csv",
+    "alignment_db": null,
+    "alignment_hz": null,
+    "x_min_max": null,
+    "y_min_max": null
+  },
+  {
+    "group": "measurements",
+    "index": 21,
+    "title": "Transparency 透传_强噪声",
+    "type_id": 4,
+    "type_name": "Noise Cancelling【降噪】",
+    "type_raw": {
+      "description": "",
+      "id": 4,
+      "meta_data": "{}",
+      "name": "Noise Cancelling【降噪】"
+    },
+    "rows": 957,
+    "header": [
+      "* Freq(Hz)",
+      " SPL(dB)"
+    ],
+    "first": [
+      "20",
+      "-12.053"
+    ],
+    "last": [
+      "19896.97461",
+      "-32.208"
+    ],
+    "csv": "/home/feria/realab_airpods_pro_3_extract/measurements/21_Noise_Cancelling【降噪】_Transparency_透传_强噪声.csv",
+    "alignment_db": null,
+    "alignment_hz": null,
+    "x_min_max": null,
+    "y_min_max": null
+  },
+  {
+    "group": "target_data",
+    "index": 0,
+    "title": "item_0",
+    "type_id": 1,
+    "type_name": "type_1",
+    "type_raw": 1,
+    "rows": 957,
+    "header": [
+      "* Freq(Hz)",
+      " SPL(dB)"
+    ],
+    "first": [
+      "20",
+      "95.23"
+    ],
+    "last": [
+      "19896.97461",
+      "90.698"
+    ],
+    "csv": "/home/feria/realab_airpods_pro_3_extract/target_data/00_type_1_item_0.csv",
+    "alignment_db": false,
+    "alignment_hz": false,
+    "x_min_max": null,
+    "y_min_max": null
+  }
+]

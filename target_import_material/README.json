@@ -1,0 +1,19 @@
+{
+  "name": "ReaLab Target Response 2024",
+  "source_url": "https://www.realab.com/data/1758317057514.html",
+  "source_page_title": "Apple/苹果 AirPods Pro 3 - 阅真实验室",
+  "rows": 957,
+  "header": [
+    "* Freq(Hz)",
+    " SPL(dB)"
+  ],
+  "first": [
+    "20",
+    "95.23"
+  ],
+  "last": [
+    "19896.97461",
+    "90.698"
+  ],
+  "note": "This is the grey dotted target curve from the Realab page, exported as target frequency response material. It is not a corrected headphone measurement."
+}
