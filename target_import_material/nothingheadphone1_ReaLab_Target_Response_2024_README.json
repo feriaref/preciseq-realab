@@ -14,5 +14,27 @@
     "19896.97461",
     "90.698"
   ],
-  "note": "Grey dotted target curve from the ReaLab page. Not a corrected headphone measurement and not baked into RepositoryFiles FIRs."
+  "note": "Grey dotted target curve from the ReaLab page. Not a corrected headphone measurement and not baked into RepositoryFiles FIRs.",
+  "preciseq_qr_import": {
+    "qr_png": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_qr.png",
+    "qr_text": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_qr_text.txt",
+    "payload_json": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_qr_payload.json",
+    "fit_csv": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_qr_peq_fit.csv",
+    "fit_png": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_qr_peq_fit.png",
+    "format": "PNG QR containing preciseq-target:{JSON}; JSON fields verified from APK serializers: payload s,c; curve n,d,b; band f,g,q,t.",
+    "filter_type_ordinals": {
+      "Peak": 0,
+      "Notch": 1,
+      "BandPass": 2,
+      "LowShelf": 3,
+      "HighShelf": 4,
+      "LowPass": 5,
+      "HighPass": 6,
+      "AllPass": 7
+    },
+    "note": "PrecisEQ target curves import via QR image, not repository URL. Dense ReaLab target is approximated with PEQ bands for QR import.",
+    "fit_rmse_db": 0.449,
+    "fit_max_abs_error_db": 1.51,
+    "band_count": 12
+  }
 }

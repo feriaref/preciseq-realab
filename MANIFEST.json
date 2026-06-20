@@ -1,8 +1,8 @@
 [
   {
     "path": "MANIFEST.json",
-    "size": 14763,
-    "sha256": "3540262b81164953cf6c3f87b5c01b124c6a677323e2b6312048149b9b803473"
+    "size": 13821,
+    "sha256": "2f81d6f99d81de1d1f86ed4602b52f6e0d40381b0670681feea1f742bc076ce6"
   },
   {
     "path": "README.md",
@@ -341,8 +341,8 @@
   },
   {
     "path": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_README.json",
-    "size": 429,
-    "sha256": "03d15cdd3926c4fc1bf0d5810220f21a85dabe8ddfbe76368ea77d07ec05e83d"
+    "size": 1528,
+    "sha256": "8b6357ebd9cce1d5ce991381ecde68fcfd6ed3257a901526f44192f6f23afcbf"
   },
   {
     "path": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_freq_db_no_header.txt",
@@ -358,6 +358,31 @@
     "path": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_frequency_raw.csv",
     "size": 18270,
     "sha256": "6aa5e082a6c641d3b8a194424764eca777c66e24b4560a702dd0596236ccae11"
+  },
+  {
+    "path": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_qr.png",
+    "size": 3833,
+    "sha256": "bb5821a9fdf0290fc3272bd500f5586da52d7240963a363a425ded17c34e4c80"
+  },
+  {
+    "path": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_qr_payload.json",
+    "size": 1270,
+    "sha256": "81b82347ba298ca2c215947ee70bb9b5eaeb7c6a173f6dbd2d17d2d89b38cda0"
+  },
+  {
+    "path": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_qr_peq_fit.csv",
+    "size": 24180,
+    "sha256": "a455e0c098800a75ace23d3315499ebaeb34984b7af8b9f9e0feb2ecabd6e71a"
+  },
+  {
+    "path": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_qr_peq_fit.png",
+    "size": 198083,
+    "sha256": "9a601daaf39a6474ae112e10d6a3f818fad85547c64dfb465cd72c98c2df1640"
+  },
+  {
+    "path": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_qr_text.txt",
+    "size": 603,
+    "sha256": "9162cf9778b77a03cad0c7f4797d73e3cbdc9bdb41b5a8a9e80e300a7c3475a4"
   },
   {
     "path": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_source_export.csv",
