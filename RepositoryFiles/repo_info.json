@@ -1,5 +1,5 @@
 {
-  "name": "AirPods Pro 3 ReaLab BK5128 experimental PrecisEQ repository",
-  "maintainer": "local experimental build by Hermes Agent",
-  "description": "Experimental FIR repository generated from ReaLab Apple AirPods Pro 3 page. Source curve: Volume-6_ANC on (B&K 5128), firmware 8A357. The ReaLab Target Response 2024 is NOT baked into these FIRs; it is exported separately under target_import_material. Rig compensation to PrecisEQ/oratory basis is unresolved."
+  "name": "ReaLab experimental PrecisEQ repository",
+  "maintainer": "feriaref / Hermes Agent generated",
+  "description": "Experimental PrecisEQ FIR repository generated from ReaLab embedded measurement data. FIRs use selected measured frequency responses with AutoEq zero/flat target; ReaLab target curves are exported separately under target_import_material and are not baked into the FIRs. Rig compensation to PrecisEQ/oratory basis is unresolved."
 }

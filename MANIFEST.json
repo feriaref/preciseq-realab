@@ -1,13 +1,33 @@
 [
   {
     "path": "MANIFEST.json",
-    "size": 3291,
-    "sha256": "d8a41a85bb0ab1dbcef843420dba47c6dab0b436eced36bbcc4c991d2e30e56f"
+    "size": 6450,
+    "sha256": "45923f700b216a7fb1a8f692d54543c2739e7a194d546da7dff8290a0571b79c"
   },
   {
     "path": "README.md",
-    "size": 1374,
-    "sha256": "638d6b5ae0838f8ca38af987fa6d6048812708644167dfbdbaa04b7cebd9dd03"
+    "size": 3015,
+    "sha256": "08ec9a87de7db046b0722734e5d39523b9eb0acf6fd7b43318dcf4ce1616b1cc"
+  },
+  {
+    "path": "RepositoryFiles/appleairpodspro2anconbk5128volume6_1_192.wav",
+    "size": 153644,
+    "sha256": "e3925ff567b0c7320531573c1bc08f0b842b22acfdd75f1f88292fc654b71228"
+  },
+  {
+    "path": "RepositoryFiles/appleairpodspro2anconbk5128volume6_1_44.wav",
+    "size": 36044,
+    "sha256": "bdfa97b14d0c864997e2e1f0b9aa555ddadc245dc86550dcda5b0b7286d0d206"
+  },
+  {
+    "path": "RepositoryFiles/appleairpodspro2anconbk5128volume6_1_48.wav",
+    "size": 38444,
+    "sha256": "6a426f3f13e277c7836098eec1a91600547267a840d293313433b7a6374eaa87"
+  },
+  {
+    "path": "RepositoryFiles/appleairpodspro2anconbk5128volume6_1_96.wav",
+    "size": 76844,
+    "sha256": "84724caf76ecdee0434d1ddd5c217bee9b52a113fc724e5053d6b645a7ca78aa"
   },
   {
     "path": "RepositoryFiles/appleairpodspro3anconbk5128vol6_1_192.wav",
@@ -31,13 +51,13 @@
   },
   {
     "path": "RepositoryFiles/headphone_list.json",
-    "size": 339,
-    "sha256": "43ee60a1e3f361b41fca2bac4e09ab686db9241e1ed93a01b3594f4ba88b5683"
+    "size": 679,
+    "sha256": "2b3b65f853bb21550c2caed818d0ce756449930cbe0e49ddf7ed75e7a6ed50e9"
   },
   {
     "path": "RepositoryFiles/repo_info.json",
-    "size": 466,
-    "sha256": "f9b9e032e612030385ae857200eee31cd07220c272b15ca5cf474bf9e7a9252c"
+    "size": 456,
+    "sha256": "501850d6e652ea9a6f499a3347f5a3e5485cb17119b17f731b7f05e3fd138e91"
   },
   {
     "path": "docs/REPORT.md",
@@ -58,6 +78,41 @@
     "path": "measurements/0_in-ear/Apple AirPods Pro 3 Volume-6 ANC on BK5128.csv",
     "size": 18285,
     "sha256": "cd1c6644870c152d66b612e8f9ad4618c9d77469f89ae0a0e65142a28368990a"
+  },
+  {
+    "path": "measurements/0_in-ear/Apple_苹果_AirPods_Pro_2_ANC_on_BK5128_Volume-6.csv",
+    "size": 18288,
+    "sha256": "7f2ad76b37953e8f07176490da3a9ab04b27062fcbf924a86f834eab5e78ad05"
+  },
+  {
+    "path": "scripts/import_realab.py",
+    "size": 14469,
+    "sha256": "ef1edc9242aef8cc01a01c975e33d8c6d41c0c7a4b9b9ae3c8b8703f1be86c0c"
+  },
+  {
+    "path": "source_pages/appleairpodspro2/import_summary.json",
+    "size": 1354,
+    "sha256": "1a159e223e2bff82ab43820e40fab3e28d4a03a3b8af015b80504476eb09ee42"
+  },
+  {
+    "path": "source_pages/appleairpodspro2/initial_data.json",
+    "size": 1568375,
+    "sha256": "c36691842333ebebaa99c7ee2dc036605185e464bbf91abea822e266894f4d2f"
+  },
+  {
+    "path": "source_pages/appleairpodspro2/metadata.json",
+    "size": 528,
+    "sha256": "05fc88825a617d9c026734d6e0f76ff8479273f2528fc5e0ef737aa08287a2f1"
+  },
+  {
+    "path": "source_pages/appleairpodspro2/selected_curve_06_Volume-6_ANC_on（BK_5128）.csv",
+    "size": 18275,
+    "sha256": "6da141dc3f4d8ea3a72d437efc8baf67a6b59a262e0e61d2f59db2c6951b0f31"
+  },
+  {
+    "path": "source_pages/appleairpodspro2/source.html",
+    "size": 538451,
+    "sha256": "90d74c5df17c47d73c842fe4abf70915129a164e46582c9216e4a0cef5fb57e6"
   },
   {
     "path": "target_import_material/README.json",
@@ -93,5 +148,35 @@
     "path": "target_import_material/ReaLab_Target_Response_2024_source_export.csv",
     "size": 17296,
     "sha256": "5888d1518fc6822c79f2ce19e02ec9c9581338eaf8b7b60bc6fca931014c3048"
+  },
+  {
+    "path": "target_import_material/appleairpodspro2_ReaLab_Target_Response_2024_README.json",
+    "size": 431,
+    "sha256": "ef70762e138e459258048bee87de3512a6f09acee1410da53d9d8c1fd2c71f34"
+  },
+  {
+    "path": "target_import_material/appleairpodspro2_ReaLab_Target_Response_2024_freq_db_no_header.txt",
+    "size": 20535,
+    "sha256": "8f8b9e9432ddf5db2ccaef3b4ec83139f87f0c3cfd9c7ab0939ad38f05879b07"
+  },
+  {
+    "path": "target_import_material/appleairpodspro2_ReaLab_Target_Response_2024_frequency_db.csv",
+    "size": 18269,
+    "sha256": "3e62a294c8f170a2f41810ac2a4e50a5777e32d829dd58b89ad7813e6c5d487f"
+  },
+  {
+    "path": "target_import_material/appleairpodspro2_ReaLab_Target_Response_2024_frequency_raw.csv",
+    "size": 18270,
+    "sha256": "6aa5e082a6c641d3b8a194424764eca777c66e24b4560a702dd0596236ccae11"
+  },
+  {
+    "path": "target_import_material/appleairpodspro2_ReaLab_Target_Response_2024_source_export.csv",
+    "size": 18257,
+    "sha256": "28643c48fb0d7ce3697862b281a756f854464c5a65d3bd51c96ed3ce3fb6b268"
+  },
+  {
+    "path": "targets/0_zero.csv",
+    "size": 8563,
+    "sha256": "37fe99a23272c049d416572b0c3854c9170c4767b74265921d167fba931f0b68"
   }
 ]

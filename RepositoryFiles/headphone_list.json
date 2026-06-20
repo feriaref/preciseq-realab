@@ -1,5 +1,19 @@
 [
   {
+    "id": "appleairpodspro2anconbk5128volume6",
+    "type": 0,
+    "brandName": [
+      "Apple",
+      "苹果"
+    ],
+    "modelName": [
+      "AirPods Pro 2 ANC on - ReaLab BK5128 Volume-6 experimental flat",
+      "AirPods Pro 2 降噪开 - ReaLab BK5128 Volume-6 实验平直"
+    ],
+    "version": 1,
+    "noDspOffsetDb": 0.0
+  },
+  {
     "id": "appleairpodspro3anconbk5128vol6",
     "type": 0,
     "brandName": [

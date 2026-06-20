@@ -1,35 +1,78 @@
-# AirPods Pro 3 ReaLab BK5128 Experimental PrecisEQ Repository
+# ReaLab Experimental PrecisEQ Repository
 
-This is a local draft repository for PrecisEQ-Pro.
+This repository hosts experimental PrecisEQ-Pro headphone calibration FIRs generated from ReaLab embedded measurement data.
 
-## Repository URL when hosted
+## PrecisEQ repository URL
 
-Point PrecisEQ at the static directory containing `headphone_list.json`, `repo_info.json`, and WAV files, e.g.:
+Import this URL in PrecisEQ:
 
 ```text
-https://<host>/<repo>/RepositoryFiles/
+https://raw.githubusercontent.com/feriaref/preciseq-realab/main/RepositoryFiles/
 ```
 
-## Headphone FIR semantics
+`RepositoryFiles/` contains `headphone_list.json`, `repo_info.json`, and the four required WAV sample-rate variants for each entry.
 
-- Product: Apple/苹果 AirPods Pro 3
-- Firmware on source page: 8A357
-- Measurement source: https://www.realab.com/data/1758317057514.html
-- Selected measured response: `Volume-6_ANC on（B&K 5128）`
-- PrecisEQ type: `0` in-ear/TWS
-- FIR generation: AutoEq minimum phase, 44.1/48/96/192 kHz, `--preamp -11.8`
-- Target baked into FIR: zero/flat AutoEq target, not ReaLab Target Response 2024
+## Included entries
 
-Important: B&K 5128 → PrecisEQ/oratory/B&K4195 compensation is unresolved. Treat this as experimental.
+| ID | Product / state | Source | Selected measured response | Firmware | Notes |
+|---|---|---|---|---|---|
+| `appleairpodspro2anconbk5128volume6` | Apple AirPods Pro 2, ANC on | https://www.realab.com/data/1730138728611.html | `Volume-6_ANC on（B&K 5128）` | 8A356 | Experimental flat/zero-target FIR |
+| `appleairpodspro3anconbk5128vol6` | Apple AirPods Pro 3, ANC on | https://www.realab.com/data/1758317057514.html | `Volume-6_ANC on（B&K 5128）` | 8A357 | Experimental flat/zero-target FIR |
+
+## FIR semantics
+
+- PrecisEQ type: `0` in-ear/TWS.
+- FIR generation: AutoEq minimum phase, 44.1/48/96/192 kHz, `--preamp -11.8`.
+- Target baked into FIR: AutoEq zero/flat target.
+- ReaLab `Target Response(2024)` / grey dotted target curves are **not** baked into the FIRs.
+- B&K 5128 → PrecisEQ/oratory/B&K4195 compensation is unresolved. Treat these entries as experimental.
 
 ## Separate target curve material
 
-The page's grey dotted `ReaLab Target Response(2024)` has been exported separately under:
+ReaLab page `target_data` is exported separately under:
 
 ```text
 target_import_material/
 ```
 
-It is a target frequency-response curve, not a corrected headphone measurement.
+Those files are target frequency-response curves, not corrected headphone measurements. APK string analysis suggests PrecisEQ target sharing/import can use a `preciseq-target:` QR payload with serialized parametric target bands (`s`, `c`, `n`, `d`, `b`, `f`, `g`, `q`, `t`), but direct dense CSV target-response import has not been proven.
 
-APK string analysis suggests PrecisEQ target sharing/import also uses a `preciseq-target:` QR payload with serialized parametric target bands (`s`, `c`, `n`, `d`, `b`, `f`, `g`, `q`, `t`). I did not yet prove that full sampled CSV target-response files can be imported directly by the APK.
+## Reproducible import workflow
+
+A reusable importer is included:
+
+```bash
+/tmp/preciseq_py311_fixed/bin/python scripts/import_realab.py <REALAB_URL>
+```
+
+Pipeline:
+
+```text
+ReaLab URL
+→ fetch HTML
+→ parse window.__INITIAL_DATA__
+→ archive source_pages/<slug>/{source.html,initial_data.json,metadata.json}
+→ select Frequency Response curve, preferring Volume-6 when present
+→ export AutoEq-compatible measurement CSV
+→ run AutoEq zero/flat target FIR generation
+→ copy WAVs into RepositoryFiles/<id>_1_{44,48,96,192}.wav
+→ update headphone_list.json, repo_info.json, target_import_material, MANIFEST.json
+```
+
+Then verify and push:
+
+```bash
+python3 - <<'PY'
+import json, wave
+from pathlib import Path
+base=Path('.')
+for e in json.load(open('RepositoryFiles/headphone_list.json', encoding='utf-8')):
+    for short, rate in [('44',44100),('48',48000),('96',96000),('192',192000)]:
+        p=base/'RepositoryFiles'/f"{e['id']}_{e['version']}_{short}.wav"
+        with wave.open(str(p),'rb') as w:
+            assert w.getnchannels()==2 and w.getsampwidth()==4 and w.getframerate()==rate
+print('OK')
+PY
+
+git add . && git commit -m "Import <product> from ReaLab" && git push
+```
