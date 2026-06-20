@@ -14,12 +14,12 @@
     "RepositoryFiles/appleairpodspro2anconbk5128volume6_1_96.wav",
     "RepositoryFiles/appleairpodspro2anconbk5128volume6_1_192.wav"
   ],
-  "target_material": [
-    "target_import_material/appleairpodspro2_ReaLab_Target_Response_2024_source_export.csv",
-    "target_import_material/appleairpodspro2_ReaLab_Target_Response_2024_frequency_raw.csv",
-    "target_import_material/appleairpodspro2_ReaLab_Target_Response_2024_frequency_db.csv",
-    "target_import_material/appleairpodspro2_ReaLab_Target_Response_2024_freq_db_no_header.txt",
-    "target_import_material/appleairpodspro2_ReaLab_Target_Response_2024_README.json"
+  "target_curve_reference_files": [
+    "target_curve_reference_material/appleairpodspro2_ReaLab_Target_Response_2024_source_export.csv",
+    "target_curve_reference_material/appleairpodspro2_ReaLab_Target_Response_2024_frequency_raw.csv",
+    "target_curve_reference_material/appleairpodspro2_ReaLab_Target_Response_2024_frequency_db.csv",
+    "target_curve_reference_material/appleairpodspro2_ReaLab_Target_Response_2024_freq_db_no_header.txt",
+    "target_curve_reference_material/appleairpodspro2_ReaLab_Target_Response_2024_README.json"
   ],
   "note": "FIR generated to zero/flat AutoEq target; ReaLab target_data exported separately."
 }

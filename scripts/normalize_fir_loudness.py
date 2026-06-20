@@ -50,10 +50,10 @@ def main() -> None:
     ap.add_argument("--ref-hz", type=float, default=1000.0)
     args = ap.parse_args()
 
-    for hp_id in args.ids:
+    for entry_id in args.ids:
         for sr in SAMPLE_RATE_SUFFIXES:
-            src = args.repo_files / f"{hp_id}_{args.from_version}_{sr}.wav"
-            dst = args.repo_files / f"{hp_id}_{args.to_version}_{sr}.wav"
+            src = args.repo_files / f"{entry_id}_{args.from_version}_{sr}.wav"
+            dst = args.repo_files / f"{entry_id}_{args.to_version}_{sr}.wav"
             if not src.exists():
                 raise SystemExit(f"Missing {src}")
             before, gain_db, after, peak = normalize_file(src, dst, args.target_db, args.ref_hz)

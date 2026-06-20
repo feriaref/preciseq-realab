@@ -1,5 +1,5 @@
 {
   "name": "ReaLab experimental PrecisEQ repository",
   "maintainer": "feriaref / Hermes Agent generated",
-  "description": "Experimental PrecisEQ FIR repository generated from ReaLab embedded measurement data. FIRs use selected measured frequency responses with AutoEq zero/flat target; ReaLab target curves are exported separately under target_import_material and are not baked into the FIRs. Rig compensation to PrecisEQ/oratory basis is unresolved."
+  "description": "Experimental PrecisEQ FIR repository generated from ReaLab embedded measurement data. FIRs use selected measured frequency responses with AutoEq zero/flat target; ReaLab target curves are exported separately under target_curve_reference_material and are not baked into the FIRs. Entries may be in-ear/TWS or over-ear products; headphone_list.json is the official PrecisEQ schema filename. Rig compensation to PrecisEQ/oratory basis is unresolved."
 }

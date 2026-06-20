@@ -1,13 +1,13 @@
 [
   {
     "path": "MANIFEST.json",
-    "size": 18739,
-    "sha256": "1b95d993021c6cae2df44430135e2ae89b759a8e0b379e53a9d170d8ce715e3d"
+    "size": 18994,
+    "sha256": "0a7a424ba9a452f3e2cf5672f9f0ff4623ab17115f4ea9d6a472ea1856902c1a"
   },
   {
     "path": "README.md",
-    "size": 3203,
-    "sha256": "40ded7a39bb0c9879fa30feb857d0c97fb912cb8835defd44aa8a0573e73621c"
+    "size": 4319,
+    "sha256": "7af08fd0524c6311daa9af2ad5a0833598871daa0a7744cec7e7581ac06b9249"
   },
   {
     "path": "RepositoryFiles/appleairpodspro2anconbk5128volume6_1_192.wav",
@@ -216,8 +216,8 @@
   },
   {
     "path": "RepositoryFiles/repo_info.json",
-    "size": 456,
-    "sha256": "501850d6e652ea9a6f499a3347f5a3e5485cb17119b17f731b7f05e3fd138e91"
+    "size": 575,
+    "sha256": "26569af3235855eaa84e43e7cdc488474c1ab6ce4f36747cc124c8fae589f48e"
   },
   {
     "path": "docs/REPORT.md",
@@ -250,34 +250,34 @@
     "sha256": "cd1c6644870c152d66b612e8f9ad4618c9d77469f89ae0a0e65142a28368990a"
   },
   {
-    "path": "measurements/2_closed-back/Nothing_Headphone（1）_ANC_on_BK5128_Balanced.csv",
+    "path": "measurements/2_over-ear-closed/Nothing_Headphone（1）_ANC_on_BK5128_Balanced.csv",
     "size": 18244,
     "sha256": "9603a77ec9caf382cbb0823a1789d8ccfa9405e9fa2f3cf6a0ebfced7a82d310"
   },
   {
-    "path": "measurements/2_closed-back/Nothing_Headphone（1）_ANC_on_BK5128_BassBoost.csv",
+    "path": "measurements/2_over-ear-closed/Nothing_Headphone（1）_ANC_on_BK5128_BassBoost.csv",
     "size": 18299,
     "sha256": "c5d48b10235412a26cf8d54bb19917d6d1baa1ab9e2187837327c2c399a918fb"
   },
   {
-    "path": "measurements/2_closed-back/Nothing_Headphone（1）_ANC_on_BK5128_TrebleBoost.csv",
+    "path": "measurements/2_over-ear-closed/Nothing_Headphone（1）_ANC_on_BK5128_TrebleBoost.csv",
     "size": 18181,
     "sha256": "cf046367386dfec84aa84a5971f1cc09187fccf928c6186b96ea2311b6878de5"
   },
   {
     "path": "scripts/import_realab.py",
-    "size": 17015,
-    "sha256": "62fe4a303e146c0b9acabc0766b7b7e4c82c6386583562ce94a3f1b68f8965b8"
+    "size": 17513,
+    "sha256": "63ca93fe951d6071c0e032a49e18c9f732a510613e5e2cc6dc6ad2b728599338"
   },
   {
     "path": "scripts/normalize_fir_loudness.py",
-    "size": 2705,
-    "sha256": "ed13a720512ba531cd3fb5982f22f78620495715ac7e77972c7c2196e685a4c4"
+    "size": 2714,
+    "sha256": "596779890dd732c859e20dda7aa42ca7ece4f3228d0fd17122e89d322fb1a852"
   },
   {
     "path": "source_pages/appleairpodspro2/import_summary.json",
-    "size": 1354,
-    "sha256": "1a159e223e2bff82ab43820e40fab3e28d4a03a3b8af015b80504476eb09ee42"
+    "size": 1412,
+    "sha256": "5a5b878af8f30cfea3a678ae423c2adb45160573e2296f61dc61a152b12518c8"
   },
   {
     "path": "source_pages/appleairpodspro2/initial_data.json",
@@ -301,8 +301,8 @@
   },
   {
     "path": "source_pages/appleairpodspro3/import_summary.json",
-    "size": 1339,
-    "sha256": "c5b12a61a1b0b99fc6b1bf61a06859e1434e500d6c22f1a599166e89b0704772"
+    "size": 1397,
+    "sha256": "db8d4a517de378df67734c480d4085ae8582e91db746224462821e39676cf747"
   },
   {
     "path": "source_pages/appleairpodspro3/initial_data.json",
@@ -326,8 +326,8 @@
   },
   {
     "path": "source_pages/nothingheadphone1/import_summary.json",
-    "size": 1397,
-    "sha256": "f1ffb5688148c063b55d39f7eb88a483171933d8c90eac766b46b30311a94bf8"
+    "size": 1459,
+    "sha256": "317d6ebe3f2186e5fc40214cdf2c392b1b00a41921a9bf7caaaff9fca977b2e2"
   },
   {
     "path": "source_pages/nothingheadphone1/initial_data.json",
@@ -360,137 +360,137 @@
     "sha256": "c13ec78161030754e38699abe2de583845d0f5db4eb9743441a6b7fd0fb6ef13"
   },
   {
-    "path": "target_import_material/README.json",
+    "path": "target_curve_reference_material/README.json",
     "size": 501,
     "sha256": "d52e7f560866c8dbe088d8559e22afcb903736883121448d3c7ae75c6501145d"
   },
   {
-    "path": "target_import_material/ReaLab_Target_Response_2024_freq_db_no_header.txt",
+    "path": "target_curve_reference_material/ReaLab_Target_Response_2024_freq_db_no_header.txt",
     "size": 20535,
     "sha256": "8f8b9e9432ddf5db2ccaef3b4ec83139f87f0c3cfd9c7ab0939ad38f05879b07"
   },
   {
-    "path": "target_import_material/ReaLab_Target_Response_2024_frequency_db.csv",
+    "path": "target_curve_reference_material/ReaLab_Target_Response_2024_frequency_db.csv",
     "size": 18269,
     "sha256": "3e62a294c8f170a2f41810ac2a4e50a5777e32d829dd58b89ad7813e6c5d487f"
   },
   {
-    "path": "target_import_material/ReaLab_Target_Response_2024_frequency_raw.csv",
+    "path": "target_curve_reference_material/ReaLab_Target_Response_2024_frequency_raw.csv",
     "size": 18270,
     "sha256": "6aa5e082a6c641d3b8a194424764eca777c66e24b4560a702dd0596236ccae11"
   },
   {
-    "path": "target_import_material/ReaLab_Target_Response_2024_preciseq_target_qr_payload_experimental.json",
+    "path": "target_curve_reference_material/ReaLab_Target_Response_2024_preciseq_target_qr_payload_experimental.json",
     "size": 40380,
     "sha256": "61455be52f52765993ba2b685c6badb3138b1b5f5a5c92172fbdcd3721d2c764"
   },
   {
-    "path": "target_import_material/ReaLab_Target_Response_2024_preciseq_target_qr_text_experimental.txt",
+    "path": "target_curve_reference_material/ReaLab_Target_Response_2024_preciseq_target_qr_text_experimental.txt",
     "size": 40396,
     "sha256": "18e7ba4b9a63f2ade9e153a0a0aa3fa7d89bc3e823c448c74f812dfdc68d3031"
   },
   {
-    "path": "target_import_material/ReaLab_Target_Response_2024_source_export.csv",
+    "path": "target_curve_reference_material/ReaLab_Target_Response_2024_source_export.csv",
     "size": 17296,
     "sha256": "5888d1518fc6822c79f2ce19e02ec9c9581338eaf8b7b60bc6fca931014c3048"
   },
   {
-    "path": "target_import_material/appleairpodspro2_ReaLab_Target_Response_2024_README.json",
+    "path": "target_curve_reference_material/appleairpodspro2_ReaLab_Target_Response_2024_README.json",
     "size": 431,
     "sha256": "ef70762e138e459258048bee87de3512a6f09acee1410da53d9d8c1fd2c71f34"
   },
   {
-    "path": "target_import_material/appleairpodspro2_ReaLab_Target_Response_2024_freq_db_no_header.txt",
+    "path": "target_curve_reference_material/appleairpodspro2_ReaLab_Target_Response_2024_freq_db_no_header.txt",
     "size": 20535,
     "sha256": "8f8b9e9432ddf5db2ccaef3b4ec83139f87f0c3cfd9c7ab0939ad38f05879b07"
   },
   {
-    "path": "target_import_material/appleairpodspro2_ReaLab_Target_Response_2024_frequency_db.csv",
+    "path": "target_curve_reference_material/appleairpodspro2_ReaLab_Target_Response_2024_frequency_db.csv",
     "size": 18269,
     "sha256": "3e62a294c8f170a2f41810ac2a4e50a5777e32d829dd58b89ad7813e6c5d487f"
   },
   {
-    "path": "target_import_material/appleairpodspro2_ReaLab_Target_Response_2024_frequency_raw.csv",
+    "path": "target_curve_reference_material/appleairpodspro2_ReaLab_Target_Response_2024_frequency_raw.csv",
     "size": 18270,
     "sha256": "6aa5e082a6c641d3b8a194424764eca777c66e24b4560a702dd0596236ccae11"
   },
   {
-    "path": "target_import_material/appleairpodspro2_ReaLab_Target_Response_2024_source_export.csv",
+    "path": "target_curve_reference_material/appleairpodspro2_ReaLab_Target_Response_2024_source_export.csv",
     "size": 18257,
     "sha256": "28643c48fb0d7ce3697862b281a756f854464c5a65d3bd51c96ed3ce3fb6b268"
   },
   {
-    "path": "target_import_material/appleairpodspro3_ReaLab_Target_Response_2024_README.json",
+    "path": "target_curve_reference_material/appleairpodspro3_ReaLab_Target_Response_2024_README.json",
     "size": 431,
     "sha256": "24e5fdc666b89021bee3c3ec41010b51e38ee72bc68c5125b55fc849cc4294e4"
   },
   {
-    "path": "target_import_material/appleairpodspro3_ReaLab_Target_Response_2024_freq_db_no_header.txt",
+    "path": "target_curve_reference_material/appleairpodspro3_ReaLab_Target_Response_2024_freq_db_no_header.txt",
     "size": 20535,
     "sha256": "8f8b9e9432ddf5db2ccaef3b4ec83139f87f0c3cfd9c7ab0939ad38f05879b07"
   },
   {
-    "path": "target_import_material/appleairpodspro3_ReaLab_Target_Response_2024_frequency_db.csv",
+    "path": "target_curve_reference_material/appleairpodspro3_ReaLab_Target_Response_2024_frequency_db.csv",
     "size": 18269,
     "sha256": "3e62a294c8f170a2f41810ac2a4e50a5777e32d829dd58b89ad7813e6c5d487f"
   },
   {
-    "path": "target_import_material/appleairpodspro3_ReaLab_Target_Response_2024_frequency_raw.csv",
+    "path": "target_curve_reference_material/appleairpodspro3_ReaLab_Target_Response_2024_frequency_raw.csv",
     "size": 18270,
     "sha256": "6aa5e082a6c641d3b8a194424764eca777c66e24b4560a702dd0596236ccae11"
   },
   {
-    "path": "target_import_material/appleairpodspro3_ReaLab_Target_Response_2024_source_export.csv",
+    "path": "target_curve_reference_material/appleairpodspro3_ReaLab_Target_Response_2024_source_export.csv",
     "size": 18257,
     "sha256": "28643c48fb0d7ce3697862b281a756f854464c5a65d3bd51c96ed3ce3fb6b268"
   },
   {
-    "path": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_README.json",
-    "size": 1528,
-    "sha256": "8b6357ebd9cce1d5ce991381ecde68fcfd6ed3257a901526f44192f6f23afcbf"
+    "path": "target_curve_reference_material/nothingheadphone1_ReaLab_Target_Response_2024_README.json",
+    "size": 1573,
+    "sha256": "3a0154923df26c1222168db0c60ab70d8f465742ca8484c9d34600292bb55d0b"
   },
   {
-    "path": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_freq_db_no_header.txt",
+    "path": "target_curve_reference_material/nothingheadphone1_ReaLab_Target_Response_2024_freq_db_no_header.txt",
     "size": 20535,
     "sha256": "8f8b9e9432ddf5db2ccaef3b4ec83139f87f0c3cfd9c7ab0939ad38f05879b07"
   },
   {
-    "path": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_frequency_db.csv",
+    "path": "target_curve_reference_material/nothingheadphone1_ReaLab_Target_Response_2024_frequency_db.csv",
     "size": 18269,
     "sha256": "3e62a294c8f170a2f41810ac2a4e50a5777e32d829dd58b89ad7813e6c5d487f"
   },
   {
-    "path": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_frequency_raw.csv",
+    "path": "target_curve_reference_material/nothingheadphone1_ReaLab_Target_Response_2024_frequency_raw.csv",
     "size": 18270,
     "sha256": "6aa5e082a6c641d3b8a194424764eca777c66e24b4560a702dd0596236ccae11"
   },
   {
-    "path": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_qr.png",
+    "path": "target_curve_reference_material/nothingheadphone1_ReaLab_Target_Response_2024_qr.png",
     "size": 3833,
     "sha256": "bb5821a9fdf0290fc3272bd500f5586da52d7240963a363a425ded17c34e4c80"
   },
   {
-    "path": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_qr_payload.json",
+    "path": "target_curve_reference_material/nothingheadphone1_ReaLab_Target_Response_2024_qr_payload.json",
     "size": 1270,
     "sha256": "81b82347ba298ca2c215947ee70bb9b5eaeb7c6a173f6dbd2d17d2d89b38cda0"
   },
   {
-    "path": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_qr_peq_fit.csv",
+    "path": "target_curve_reference_material/nothingheadphone1_ReaLab_Target_Response_2024_qr_peq_fit.csv",
     "size": 24180,
     "sha256": "a455e0c098800a75ace23d3315499ebaeb34984b7af8b9f9e0feb2ecabd6e71a"
   },
   {
-    "path": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_qr_peq_fit.png",
+    "path": "target_curve_reference_material/nothingheadphone1_ReaLab_Target_Response_2024_qr_peq_fit.png",
     "size": 198083,
     "sha256": "9a601daaf39a6474ae112e10d6a3f818fad85547c64dfb465cd72c98c2df1640"
   },
   {
-    "path": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_qr_text.txt",
+    "path": "target_curve_reference_material/nothingheadphone1_ReaLab_Target_Response_2024_qr_text.txt",
     "size": 603,
     "sha256": "9162cf9778b77a03cad0c7f4797d73e3cbdc9bdb41b5a8a9e80e300a7c3475a4"
   },
   {
-    "path": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_source_export.csv",
+    "path": "target_curve_reference_material/nothingheadphone1_ReaLab_Target_Response_2024_source_export.csv",
     "size": 18257,
     "sha256": "28643c48fb0d7ce3697862b281a756f854464c5a65d3bd51c96ed3ce3fb6b268"
   },

@@ -16,11 +16,11 @@
   ],
   "note": "Grey dotted target curve from the ReaLab page. Not a corrected headphone measurement and not baked into RepositoryFiles FIRs.",
   "preciseq_qr_import": {
-    "qr_png": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_qr.png",
-    "qr_text": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_qr_text.txt",
-    "payload_json": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_qr_payload.json",
-    "fit_csv": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_qr_peq_fit.csv",
-    "fit_png": "target_import_material/nothingheadphone1_ReaLab_Target_Response_2024_qr_peq_fit.png",
+    "qr_png": "target_curve_reference_material/nothingheadphone1_ReaLab_Target_Response_2024_qr.png",
+    "qr_text": "target_curve_reference_material/nothingheadphone1_ReaLab_Target_Response_2024_qr_text.txt",
+    "payload_json": "target_curve_reference_material/nothingheadphone1_ReaLab_Target_Response_2024_qr_payload.json",
+    "fit_csv": "target_curve_reference_material/nothingheadphone1_ReaLab_Target_Response_2024_qr_peq_fit.csv",
+    "fit_png": "target_curve_reference_material/nothingheadphone1_ReaLab_Target_Response_2024_qr_peq_fit.png",
     "format": "PNG QR containing preciseq-target:{JSON}; JSON fields verified from APK serializers: payload s,c; curve n,d,b; band f,g,q,t.",
     "filter_type_ordinals": {
       "Peak": 0,

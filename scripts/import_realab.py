@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Import a ReaLab headphone measurement page into this PrecisEQ repository.
+"""Import a ReaLab earphone or over-ear product measurement page into this PrecisEQ repository.
 
 Pipeline:
   ReaLab URL -> embedded window.__INITIAL_DATA__ -> provenance CSV/JSON
@@ -7,7 +7,7 @@ Pipeline:
   -> RepositoryFiles metadata and MANIFEST update.
 
 This intentionally keeps ReaLab target_data separate from FIR generation. Target
-curves are exported under target_import_material/ as import/reference material.
+curves are exported under target_curve_reference_material/ as import/reference material.
 """
 from __future__ import annotations
 
@@ -33,7 +33,7 @@ REPOSITORY_FILES = REPO_ROOT / "RepositoryFiles"
 MEASUREMENTS_ROOT = REPO_ROOT / "measurements"
 TARGETS = REPO_ROOT / "targets"
 DOCS = REPO_ROOT / "docs"
-TARGET_IMPORT = REPO_ROOT / "target_import_material"
+TARGET_CURVE_REFERENCE = REPO_ROOT / "target_curve_reference_material"
 SOURCE_ARCHIVE = REPO_ROOT / "source_pages"
 AUTOEQ_PYTHON_DEFAULT = "/tmp/preciseq_py311_fixed/bin/python"
 ZERO_TARGET_URL = "https://raw.githubusercontent.com/yokodev-pro/PrecisEQ-Repository-oratory1990-Unofficial/main/targets/0_zero.csv"
@@ -99,7 +99,7 @@ def get_type_name(item: dict[str, Any]) -> str:
     return f"type_{typ}"
 
 
-def infer_preciseq_type_and_category(meta: dict[str, Any]) -> tuple[int, str]:
+def infer_preciseq_type_and_measurement_category(meta: dict[str, Any]) -> tuple[int, str]:
     cat = meta.get("cat") or {}
     cat_text = " ".join(str(x) for x in [cat.get("name") if isinstance(cat, dict) else cat, cat.get("link") if isinstance(cat, dict) else ""]).lower()
     title = str(meta.get("title") or "").lower()
@@ -109,7 +109,7 @@ def infer_preciseq_type_and_category(meta: dict[str, Any]) -> tuple[int, str]:
     if any(key in combined for key in ["open-back", "开放"]):
         return 1, "1_open-back"
     if any(key in combined for key in ["over-ear", "头戴", "closed-back", "封闭", "wireless over-ear"]):
-        return 2, "2_closed-back"
+        return 2, "2_over-ear-closed"
     return 0, "0_in-ear"
 
 
@@ -155,13 +155,13 @@ def ensure_zero_target() -> Path:
     return p
 
 
-def run_autoeq(autoeq_python: str, measurement_csv: Path, target_csv: Path, work_name: str, category_dir: str) -> Path:
+def run_autoeq(autoeq_python: str, measurement_csv: Path, target_csv: Path, work_name: str, measurement_category_dir: str) -> Path:
     py = Path(autoeq_python)
     if not py.exists():
         raise RuntimeError(f"AutoEq Python not found: {py}. Create it with python3.11 venv + pip install autoeq soundfile.")
     temp = Path(tempfile.mkdtemp(prefix="preciseq_realab_autoeq_"))
-    in_dir = temp / "input" / category_dir
-    combined_work_dir = temp / "combined" / category_dir / work_name
+    in_dir = temp / "input" / measurement_category_dir
+    combined_work_dir = temp / "combined" / measurement_category_dir / work_name
     in_dir.mkdir(parents=True)
     combined_work_dir.mkdir(parents=True)
     in_csv = in_dir / f"{work_name}.csv"
@@ -189,7 +189,7 @@ def run_autoeq(autoeq_python: str, measurement_csv: Path, target_csv: Path, work
         log_path = temp / f"autoeq_{fs}.log"
         with log_path.open("w", encoding="utf-8") as log:
             subprocess.run(cmd, stdout=log, stderr=subprocess.STDOUT, check=True)
-        matches = list((out_dir / category_dir / work_name).glob(f"* minimum phase {fs}Hz.wav"))
+        matches = list((out_dir / measurement_category_dir / work_name).glob(f"* minimum phase {fs}Hz.wav"))
         if not matches:
             raise RuntimeError(f"Missing AutoEq output WAV for {fs} Hz in {out_dir}")
         shutil.copy2(matches[0], combined_work_dir / matches[0].name)
@@ -209,28 +209,30 @@ def write_official_style_wav(src: Path, dst: Path, expected_rate: int) -> None:
     sf.write(dst, data.astype("float32"), sr, subtype="FLOAT", format="WAV")
 
 
-def copy_wavs(output_dir: Path, hp_id: str, version: int) -> list[Path]:
+def copy_wavs(output_dir: Path, entry_id: str, version: int) -> list[Path]:
     fs_map = {"44100": "44", "48000": "48", "96000": "96", "192000": "192"}
     copied: list[Path] = []
     for hz, short in fs_map.items():
         matches = list(output_dir.glob(f"* minimum phase {hz}Hz.wav"))
         if not matches:
             raise RuntimeError(f"Missing AutoEq output WAV for {hz} Hz in {output_dir}")
-        dst = REPOSITORY_FILES / f"{hp_id}_{version}_{short}.wav"
+        dst = REPOSITORY_FILES / f"{entry_id}_{version}_{short}.wav"
         write_official_style_wav(matches[0], dst, int(hz))
         copied.append(dst)
     return copied
 
 
-def load_headphone_list() -> list[dict[str, Any]]:
+def load_calibration_entries() -> list[dict[str, Any]]:
+    # Official PrecisEQ schema filename. Entries may be in-ear/TWS or over-ear products.
     p = REPOSITORY_FILES / "headphone_list.json"
     if not p.exists():
         return []
     return json.loads(p.read_text(encoding="utf-8"))
 
 
-def save_headphone_list(entries: list[dict[str, Any]]) -> None:
+def save_calibration_entries(entries: list[dict[str, Any]]) -> None:
     entries = sorted(entries, key=lambda x: x.get("id", ""))
+    # Official PrecisEQ schema filename. Do not rename this file in RepositoryFiles/.
     (REPOSITORY_FILES / "headphone_list.json").write_text(json.dumps(entries, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
@@ -247,7 +249,7 @@ def parse_brand_model(title: str, brand: str | None) -> tuple[list[str], list[st
     return brand_names, [model]
 
 
-def export_target_material(page_slug: str, meta: dict[str, Any], target_items: list[dict[str, Any]]) -> list[Path]:
+def export_target_curve_reference(page_slug: str, meta: dict[str, Any], target_items: list[dict[str, Any]]) -> list[Path]:
     written: list[Path] = []
     if not target_items:
         return written
@@ -256,10 +258,10 @@ def export_target_material(page_slug: str, meta: dict[str, Any], target_items: l
     if not rows:
         return written
     prefix = f"{page_slug}_ReaLab_Target_Response_2024"
-    source = TARGET_IMPORT / f"{prefix}_source_export.csv"
-    raw = TARGET_IMPORT / f"{prefix}_frequency_raw.csv"
-    db = TARGET_IMPORT / f"{prefix}_frequency_db.csv"
-    nohdr = TARGET_IMPORT / f"{prefix}_freq_db_no_header.txt"
+    source = TARGET_CURVE_REFERENCE / f"{prefix}_source_export.csv"
+    raw = TARGET_CURVE_REFERENCE / f"{prefix}_frequency_raw.csv"
+    db = TARGET_CURVE_REFERENCE / f"{prefix}_frequency_db.csv"
+    nohdr = TARGET_CURVE_REFERENCE / f"{prefix}_freq_db_no_header.txt"
     write_raw_csv(source, rows)
     write_curve_csv(raw, rows, ("frequency", "raw"))
     write_curve_csv(db, rows, ("frequency", "dB"))
@@ -274,9 +276,9 @@ def export_target_material(page_slug: str, meta: dict[str, Any], target_items: l
         "header": rows[0],
         "first": rows[1] if len(rows) > 1 else None,
         "last": rows[-1] if len(rows) > 1 else None,
-        "note": "Grey dotted target curve from the ReaLab page. Not a corrected headphone measurement and not baked into RepositoryFiles FIRs.",
+        "note": "Grey dotted target curve from the ReaLab page. Not a corrected product measurement and not baked into RepositoryFiles FIRs.",
     }
-    info_path = TARGET_IMPORT / f"{prefix}_README.json"
+    info_path = TARGET_CURVE_REFERENCE / f"{prefix}_README.json"
     info_path.write_text(json.dumps(info, ensure_ascii=False, indent=2), encoding="utf-8")
     written.extend([source, raw, db, nohdr, info_path])
     return written
@@ -288,7 +290,7 @@ def update_repo_info() -> None:
     info.update({
         "name": "ReaLab experimental PrecisEQ repository",
         "maintainer": "feriaref / Hermes Agent generated",
-        "description": "Experimental PrecisEQ FIR repository generated from ReaLab embedded measurement data. FIRs use selected measured frequency responses with AutoEq zero/flat target; ReaLab target curves are exported separately under target_import_material and are not baked into the FIRs. Rig compensation to PrecisEQ/oratory basis is unresolved.",
+        "description": "Experimental PrecisEQ FIR repository generated from ReaLab embedded measurement data. FIRs use selected measured frequency responses with AutoEq zero/flat target; ReaLab target curves are exported separately under target_curve_reference_material and are not baked into the FIRs. Rig compensation to PrecisEQ/oratory basis is unresolved.",
     })
     p.write_text(json.dumps(info, ensure_ascii=False, indent=2), encoding="utf-8")
 
@@ -316,22 +318,22 @@ def main() -> None:
     ap.add_argument("--id-override", default=None, help="Optional stable PrecisEQ id override for regenerating legacy entries without changing filenames.")
     args = ap.parse_args()
 
-    for d in [REPOSITORY_FILES, MEASUREMENTS_ROOT, TARGETS, DOCS, TARGET_IMPORT, SOURCE_ARCHIVE]:
+    for d in [REPOSITORY_FILES, MEASUREMENTS_ROOT, TARGETS, DOCS, TARGET_CURVE_REFERENCE, SOURCE_ARCHIVE]:
         d.mkdir(parents=True, exist_ok=True)
 
     html = fetch_text(args.url)
     data = extract_initial_data(html)
     meta = metadata_from_data(args.url, data)
     D = data.get("Data", {})
-    title = meta.get("title") or "Unknown Headphone"
-    page_slug = slug_ascii(title) or "realabheadphone"
+    title = meta.get("title") or "Unknown Product"
+    page_slug = slug_ascii(title) or "realabproduct"
     page_dir = SOURCE_ARCHIVE / page_slug
     page_dir.mkdir(parents=True, exist_ok=True)
     (page_dir / "source.html").write_text(html, encoding="utf-8")
     (page_dir / "initial_data.json").write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     (page_dir / "metadata.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    hp_type, category_dir = infer_preciseq_type_and_category(meta)
+    preciseq_type, measurement_category_dir = infer_preciseq_type_and_measurement_category(meta)
     idx, curve = choose_fr_curve(D.get("data") or [], args.preferred_title_regex)
     curve_title = curve.get("title") or f"curve_{idx}"
     rows = curve.get("data") or []
@@ -343,18 +345,18 @@ def main() -> None:
     vol_label = args.volume_label or (vol_match.group(0).replace(" ", "") if vol_match else f"curve{idx}")
     mode_label = "ANC on" if re.search(r"ANC\s*on", curve_title, re.I) else ""
     rig_label = "BK5128" if "5128" in curve_title else ""
-    hp_id = args.id_override or slug_ascii(f"{title} {mode_label} {rig_label} {vol_label}")
+    entry_id = args.id_override or slug_ascii(f"{title} {mode_label} {rig_label} {vol_label}")
     version = 1
     work_name = f"{title} {mode_label} {rig_label} {vol_label}".strip()
 
-    measurement_csv = MEASUREMENTS_ROOT / category_dir / f"{safe_file_stem(work_name)}.csv"
+    measurement_csv = MEASUREMENTS_ROOT / measurement_category_dir / f"{safe_file_stem(work_name)}.csv"
     write_curve_csv(measurement_csv, rows)
     raw_curve_csv = page_dir / f"selected_curve_{idx:02d}_{safe_file_stem(curve_title)}.csv"
     write_raw_csv(raw_curve_csv, rows)
 
     target_path = ensure_zero_target()
-    autoeq_output = run_autoeq(args.autoeq_python, measurement_csv, target_path, safe_file_stem(work_name, 120), category_dir)
-    wavs = copy_wavs(autoeq_output, hp_id, version)
+    autoeq_output = run_autoeq(args.autoeq_python, measurement_csv, target_path, safe_file_stem(work_name, 120), measurement_category_dir)
+    wavs = copy_wavs(autoeq_output, entry_id, version)
 
     brand_names, model_base = parse_brand_model(title, meta.get("brand"))
     model_en = f"{model_base[0]} {mode_label} - ReaLab {rig_label} {vol_label} experimental flat".replace("  ", " ").strip()
@@ -362,19 +364,19 @@ def main() -> None:
     if len(brand_names) > 1 and brand_names[1] == "苹果":
         model_zh = model_en.replace("AirPods", "AirPods").replace("ANC on", "降噪开").replace("experimental flat", "实验平直")
     entry = {
-        "id": hp_id,
-        "type": hp_type,
+        "id": entry_id,
+        "type": preciseq_type,
         "brandName": brand_names,
         "modelName": [model_en, model_zh],
         "version": version,
         "noDspOffsetDb": 0.0,
     }
-    entries = [e for e in load_headphone_list() if e.get("id") != hp_id]
+    entries = [e for e in load_calibration_entries() if e.get("id") != entry_id]
     entries.append(entry)
-    save_headphone_list(entries)
+    save_calibration_entries(entries)
     update_repo_info()
 
-    target_written = export_target_material(page_slug, meta, D.get("target_data") or [])
+    target_curve_reference_files = export_target_curve_reference(page_slug, meta, D.get("target_data") or [])
 
     summary = {
         "url": args.url,
@@ -382,12 +384,12 @@ def main() -> None:
         "selected_curve_index": idx,
         "selected_curve_title": curve_title,
         "selected_curve_rows": len(rows) - 1,
-        "id": hp_id,
+        "id": entry_id,
         "version": version,
         "measurement_csv": str(measurement_csv.relative_to(REPO_ROOT)),
         "raw_curve_csv": str(raw_curve_csv.relative_to(REPO_ROOT)),
         "wavs": [str(p.relative_to(REPO_ROOT)) for p in wavs],
-        "target_material": [str(p.relative_to(REPO_ROOT)) for p in target_written],
+        "target_curve_reference_files": [str(p.relative_to(REPO_ROOT)) for p in target_curve_reference_files],
         "note": "FIR generated to zero/flat AutoEq target; ReaLab target_data exported separately.",
     }
     (page_dir / "import_summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
