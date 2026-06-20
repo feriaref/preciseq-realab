@@ -1,13 +1,13 @@
 [
   {
     "path": "MANIFEST.json",
-    "size": 13821,
-    "sha256": "2f81d6f99d81de1d1f86ed4602b52f6e0d40381b0670681feea1f742bc076ce6"
+    "size": 18739,
+    "sha256": "1b95d993021c6cae2df44430135e2ae89b759a8e0b379e53a9d170d8ce715e3d"
   },
   {
     "path": "README.md",
-    "size": 3127,
-    "sha256": "e93bf49cdc41883763e61f01f181e14bf73b7d02296f37754b148f8f7d989202"
+    "size": 3203,
+    "sha256": "40ded7a39bb0c9879fa30feb857d0c97fb912cb8835defd44aa8a0573e73621c"
   },
   {
     "path": "RepositoryFiles/appleairpodspro2anconbk5128volume6_1_192.wav",
@@ -30,6 +30,26 @@
     "sha256": "60c4f00d97a158b23e4c463b06cce60fff7f4fa118e0c678c88a6b4dacc4d22e"
   },
   {
+    "path": "RepositoryFiles/appleairpodspro2anconbk5128volume6_2_192.wav",
+    "size": 131160,
+    "sha256": "2ae57e18bd459f79820bcd3ad75b7455f13b5c7fd4a2b9a9c9156a77563c609b"
+  },
+  {
+    "path": "RepositoryFiles/appleairpodspro2anconbk5128volume6_2_44.wav",
+    "size": 131160,
+    "sha256": "6675ee2f4a92438b1c429f0262791a2719962321498ea9328f45495609ee9132"
+  },
+  {
+    "path": "RepositoryFiles/appleairpodspro2anconbk5128volume6_2_48.wav",
+    "size": 131160,
+    "sha256": "428612045bc603727677787731164d22264267c1afe68f563a2f0b8e38c97709"
+  },
+  {
+    "path": "RepositoryFiles/appleairpodspro2anconbk5128volume6_2_96.wav",
+    "size": 131160,
+    "sha256": "fa940dcc7f157e0774fb09b59afb0083fd1e1ccaf612e19660cd5a6a726bd4aa"
+  },
+  {
     "path": "RepositoryFiles/appleairpodspro3anconbk5128vol6_1_192.wav",
     "size": 131160,
     "sha256": "14e564a01495d9c9d9afdbc8f745b97314a88463af67f83df00af94339c052a1"
@@ -50,9 +70,29 @@
     "sha256": "49b1c547ef08cbc07b0ffa42600a7eb6581d6dd732f47bf367fa2ee5f3a2f9a2"
   },
   {
+    "path": "RepositoryFiles/appleairpodspro3anconbk5128vol6_2_192.wav",
+    "size": 131160,
+    "sha256": "e35472fbce6d065375c972c12c10a6d87967cdea6e17a9f6b3a0a7bb2fc48caf"
+  },
+  {
+    "path": "RepositoryFiles/appleairpodspro3anconbk5128vol6_2_44.wav",
+    "size": 131160,
+    "sha256": "aee93a4a1abe3f3aaed217214517c2ce61f98d62fdbc9b2358a81031bc6ca71b"
+  },
+  {
+    "path": "RepositoryFiles/appleairpodspro3anconbk5128vol6_2_48.wav",
+    "size": 131160,
+    "sha256": "8d153ed0f2f3a92be44e7daa400e16e76078c1c759b56622cb0bb667e30a283b"
+  },
+  {
+    "path": "RepositoryFiles/appleairpodspro3anconbk5128vol6_2_96.wav",
+    "size": 131160,
+    "sha256": "117eb8b3fe49dabc213d957f71d1fb927aa20c96f0582e2718b66a5cf7302bb8"
+  },
+  {
     "path": "RepositoryFiles/headphone_list.json",
-    "size": 1699,
-    "sha256": "f75e3b7cd14ed195939f814ccb3b0f74b7fcdb915747a75c4d4ee97599e312ee"
+    "size": 1563,
+    "sha256": "dadfeea4505f692ceaa03b596e774cf58af524b3a82bc9f6a515f567347f08df"
   },
   {
     "path": "RepositoryFiles/nothingheadphone1anconbk5128balanced_1_192.wav",
@@ -75,6 +115,26 @@
     "sha256": "5d7274965a187ebecdbe2e045b87714174dbbde5448a56aab2a9b01592ae8cfb"
   },
   {
+    "path": "RepositoryFiles/nothingheadphone1anconbk5128balanced_2_192.wav",
+    "size": 131160,
+    "sha256": "8394c5939aa83b58807875804d056b271580196de1dac5ca85beefa1f178ad7a"
+  },
+  {
+    "path": "RepositoryFiles/nothingheadphone1anconbk5128balanced_2_44.wav",
+    "size": 131160,
+    "sha256": "4bc7805d1e64f10d64ff9b2ceeefce1e0a410b0c165ec4599a16f6c6a067fb9a"
+  },
+  {
+    "path": "RepositoryFiles/nothingheadphone1anconbk5128balanced_2_48.wav",
+    "size": 131160,
+    "sha256": "0f712eca2b7c7b40f491ef911e1435c41b4b387ddac39443c4fe31bf527f29b1"
+  },
+  {
+    "path": "RepositoryFiles/nothingheadphone1anconbk5128balanced_2_96.wav",
+    "size": 131160,
+    "sha256": "445c218b367edbfb7500f71391596efc82b90048f4880cbb22268244a1a7cc7e"
+  },
+  {
     "path": "RepositoryFiles/nothingheadphone1anconbk5128bassboost_1_192.wav",
     "size": 131160,
     "sha256": "13d9cbc4840f1d38b837ac4b5214a1800fe0bf0cebee9b786f737433120c3034"
@@ -95,6 +155,26 @@
     "sha256": "04852757d06614eb65ff24e8bccf1e62cd4b46d59aaea7c218d4a7e3defc4093"
   },
   {
+    "path": "RepositoryFiles/nothingheadphone1anconbk5128bassboost_2_192.wav",
+    "size": 131160,
+    "sha256": "d68070f4beb58ac8fe82187275201cf1bb0b2bfea3598f9a8c3ad1118908b75f"
+  },
+  {
+    "path": "RepositoryFiles/nothingheadphone1anconbk5128bassboost_2_44.wav",
+    "size": 131160,
+    "sha256": "bfcf34388caa5aa95d94c227d566ca3584910458d310853bb2debce2f13a8d50"
+  },
+  {
+    "path": "RepositoryFiles/nothingheadphone1anconbk5128bassboost_2_48.wav",
+    "size": 131160,
+    "sha256": "120976dfeca2904901d7c41d8c6687a703a53d865b9ecedf6115a16d7e111ef1"
+  },
+  {
+    "path": "RepositoryFiles/nothingheadphone1anconbk5128bassboost_2_96.wav",
+    "size": 131160,
+    "sha256": "d67e47935b17eeb76ca1001d75290ea72c03280dca957c1e917ca6d09d8a6f21"
+  },
+  {
     "path": "RepositoryFiles/nothingheadphone1anconbk5128trebleboost_1_192.wav",
     "size": 131160,
     "sha256": "0ae23430647e5eab4ce283228fdebbcee4b0320ab9895b257b53ed51af8610f6"
@@ -113,6 +193,26 @@
     "path": "RepositoryFiles/nothingheadphone1anconbk5128trebleboost_1_96.wav",
     "size": 131160,
     "sha256": "90222cad15c73f8ff5f1b4c0bfcdd5648c4099e8712cd72ced68b363e190456f"
+  },
+  {
+    "path": "RepositoryFiles/nothingheadphone1anconbk5128trebleboost_2_192.wav",
+    "size": 131160,
+    "sha256": "cdd1ae9afd61909ec325d36bdebbae9774bf0e9dce199a0eef1c8321f43568a0"
+  },
+  {
+    "path": "RepositoryFiles/nothingheadphone1anconbk5128trebleboost_2_44.wav",
+    "size": 131160,
+    "sha256": "6156c47e3ff4148ad4e0489733b384e9769aabf5f3dd4dfb85626acaacf2261c"
+  },
+  {
+    "path": "RepositoryFiles/nothingheadphone1anconbk5128trebleboost_2_48.wav",
+    "size": 131160,
+    "sha256": "cf6d36fb40a3bdf206943b78decca4ff4bfae57987bb7e6db151d710b31cee0a"
+  },
+  {
+    "path": "RepositoryFiles/nothingheadphone1anconbk5128trebleboost_2_96.wav",
+    "size": 131160,
+    "sha256": "2c564d367de3e1119d5cb1c5280d102ca843aa417dabd0490ab03e3715227908"
   },
   {
     "path": "RepositoryFiles/repo_info.json",
@@ -168,6 +268,11 @@
     "path": "scripts/import_realab.py",
     "size": 17015,
     "sha256": "62fe4a303e146c0b9acabc0766b7b7e4c82c6386583562ce94a3f1b68f8965b8"
+  },
+  {
+    "path": "scripts/normalize_fir_loudness.py",
+    "size": 2705,
+    "sha256": "ed13a720512ba531cd3fb5982f22f78620495715ac7e77972c7c2196e685a4c4"
   },
   {
     "path": "source_pages/appleairpodspro2/import_summary.json",

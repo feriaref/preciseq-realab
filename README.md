@@ -22,7 +22,7 @@ https://raw.githubusercontent.com/feriaref/preciseq-realab/main/RepositoryFiles/
 ## FIR semantics
 
 - PrecisEQ type: `0` in-ear/TWS.
-- FIR generation: AutoEq minimum phase, 44.1/48/96/192 kHz, `--preamp -11.8`.
+- FIR generation: AutoEq minimum phase, 44.1/48/96/192 kHz; packaged WAVs are normalized to the PrecisEQ repository standard of -12 dB pre-gain at 1 kHz.
 - Repository WAV style: official-compatible 32-bit float PCM (`pcm_f32le`), stereo, 16384 taps per sample rate.
 - Target baked into FIR: AutoEq zero/flat target.
 - ReaLab `Target Response(2024)` / grey dotted target curves are **not** baked into the FIRs.
